@@ -3,8 +3,10 @@
   margin: 0;
   padding: 0;
 }
-body {
-  background: #f8f6f6 !important;
+
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
 .img-circle {
   height: 65px;
@@ -142,8 +144,7 @@ footer {
 #foot span:nth-child(2) {
   color: #e58e26;
 }
-#foot .row h2 {
-}
+
 #foot .row ul {
   list-style: none;
 }

@@ -223,13 +223,14 @@ footer {
 }
 #foot .foot-logo {
   position: absolute;
-  fill: url(../img/rsz_logo.png);
-  background: url(../img/rsz_logo.png);
-  width: 300px;
-  height: 130px;
-  z-index: -1;
-  top: -100px;
-  left: var(--gap);
+    /* fill: url(../img/rsz_logo.png); */
+    /* background: url(../img/rsz_logo.png); */
+    background: url(../img/logo150x80.png);
+    width: 150px;
+    height: 80px;
+    z-index: -1;
+    top: -70px;
+    left: var(--gap);
 }
 #foot {
   background: #fdf2ff;
@@ -276,15 +277,14 @@ footer {
   -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
-#foot .foot-form input {
+#foot  input {
   padding: 0.5rem 1rem;
   border-radius: 10px;
-
   color: #fff;
   border: none;
   outline: none;
 }
-#foot .foot-form input:nth-child(3) {
+#foot input:nth-child(4) {
   background: #e99fb6;
 }
 
@@ -299,8 +299,7 @@ footer {
 #foot span:nth-child(2) {
   color: #e58e26;
 }
-#foot .row h2 {
-}
+
 #foot .row ul {
   list-style: none;
 }

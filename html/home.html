@@ -31,65 +31,62 @@
 	<header >
 		<!-- navbar: logo, menu -->
 		<nav class="navbar navbar-expand-md bg-white fixed-top" id="header">
-		  <a class="logo navbar-brand px-5" href="/"><img id="logo" src="img/rsz_logo.png"></a>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="background: #E99FB6;">
-		    <span class="navbar-toggler-icon">☰</span>
-		  </button>
-		  <div class="menu collapse navbar-collapse" id="collapsibleNavbar">
-		    <ul class="navbar-nav">
-		      <li class="nav-item">
-		        <a class="nav-link" href="home">TRANG CHỦ</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="blog">GIỚI THIỆU</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link" href="shop-homepage">CỬA HÀNG</a>
-		      </li> 
-		      <li class="nav-item">
-		        <a class="nav-link" href="blog">TIN TỨC</a>
-		      </li> 
-		      <li class="nav-item">
-		        <a class="nav-link" href="contact">LIÊN HỆ</a>
-		      </li>
-			<li class="nav-item" >
-				<a class="nav-link" href="shop-cart" id="navBtnCart">
-					<i class="fa fa-shopping-cart" aria-hidden="true"style="position: relative;">
-                		<div class="number" id="number"></div>
-					</i>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="login" id="navBtnLogIn">ĐĂNG NHẬP</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="sign_up" id="navBtnSignUp">ĐĂNG KÝ</a>
-			</li>
-		      <!-- <li class="nav-item">
-		        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-		      </li> -->
-		      
-			  <li class="nav-item" id="navBtnAvatar1">
-				<div class="dropdown">
-					<img class=" rounded-circle btn p-0 dropdown-toggle" id="navBtnAvatar" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false" src="img/no_user.png" width="36" height="36">
-					</img>
-					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="left: -590%;">
-						<a class="dropdown-item" href="profile">
-							Thông tin cá nhân
-						</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#" onclick="logOutOnClick()">
-							Đăng xuất
-						</a>
-					</div>
-				</div>
-			  </li>
+            <a class="logo navbar-brand px-2 " href="/"><img id="logo" src="img/rsz_logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="background: #E99FB6;">
+                <span class="navbar-toggler-icon">☰</span>
+            </button>
+            <div class="menu collapse navbar-collapse px-5" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="home">TRANG CHỦ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="shop-homepage">CỬA HÀNG</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="blog">TIN TỨC</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact">LIÊN HỆ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="shop-cart" id="navBtnCart">
+                      <i class="fa fa-shopping-cart" aria-hidden="true" style="position: relative;">
+                        <div class="number" id="number"></div>
+                      </i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="login" id="navBtnLogIn">ĐĂNG NHẬP</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sign_up" id="navBtnSignUp">ĐĂNG KÝ</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                  		        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                  		      </li> -->
+                  
+                  <li class="nav-item" id="navBtnAvatar1">
+                    <div class="dropdown">
+                      <img class=" rounded-circle btn p-0 dropdown-toggle" id="navBtnAvatar" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" src="img/no_user.png" width="36" height="36">
+                      </img>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="left: -590%;">
+                        <a class="dropdown-item" href="profile">
+                          Thông tin cá nhân
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" onclick="logOutOnClick()">
+                          Đăng xuất
+                        </a>
+                      </div>
+                    </div>
+                  </li>
 
-		    </ul>
-			
-		  </div>  
-		</nav>
+
+                </ul>
+          </div>  
+        </nav>
 
 		<!-- banner: carousel -->
 		<div id="banner" class="carousel slide" data-ride="carousel">
@@ -189,14 +186,15 @@
 									</div>
 								</div>
 								<!-- flash-sale khong doi img -->
-								<a href="products/shop-homepage.html"><img src="img/flash-sale-img.jpg"></a>
+								<a href="shop-homepage"><img src="img/flash-sale-img.jpg"></a>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="flash-sale-logo">
 								<img src="img/flash-sale-logo1.png">
 								<h1>SIÊU ƯU ĐÃI TỦ STICKER</h1>
-								<button>BUY NOW</button>
+								<a href="shop-homepage"><button>BUY NOW</button></a>
+								
 							</div>
 						</div>	
 					</div>
@@ -214,68 +212,68 @@
 							<div class="swiper-slide">
 					      		<div class="product">
 					      			<div class="themnail">
-					      				<a href="item/shop-item.html"><img src="img/but10.jpg"></a>
+					      				<a href="shop-homepage"><img src="img/but10.jpg"></a>
 					      			</div>
 						      		<div class="info">
-						      			<p>Tên sản phẩm</p>
-						      			<h4>300000</h4>
+						      			<h4>BÚT MỰC TÍM</h4>
+										  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. quod omnis sed aperiam sit veniam molestias, dicta sint doloremque dolore unde placeat quos amet!</p>
 						      		</div>
 						      	</div>
 						    </div>
 					      	<div class="swiper-slide">
 					      		<div class="product">
 					      			<div class="themnail">
-					      				<a href="item/shop-item.html"><img src="img/but10.jpg"></a>
+					      				<a href="shop-homepage"><img src="img/but11.jpg"></a>
 					      			</div>
 						      		<div class="info">
-						      			<p>Tên sản phẩm</p>
-						      			<h4>300000</h4>
-						      		</div>
+										<h4>BÚT MỰC XANH</h4>
+										<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. quod omnis sed aperiam sit veniam molestias, dicta sint doloremque dolore unde placeat quos amet!</p>
+									</div>
 						      	</div>
 						    </div>
 
 					        <div class="swiper-slide">
 					      		<div class="product">
 					      			<div class="themnail">
-					      				<a href="item/shop-item.html"><img src="img/but10.jpg"></a>
+					      				<a href="shop-homepage"><img src="img/but12.jpg"></a>
 					      			</div>
 						      		<div class="info">
-						      			<p>Tên sản phẩm</p>
-						      			<h4>300000</h4>
-						      		</div>
+										<h4>BÚT MỰC XÁM</h4>
+										<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. quod omnis sed aperiam sit veniam molestias, dicta sint doloremque dolore unde placeat quos amet!</p>
+									</div>
 						      	</div>
 						    </div>
 					      	<div class="swiper-slide">
 					      		<div class="product">
 					      			<div class="themnail">
-					      				<a href="item/shop-item.html"><img src="img/but10.jpg"></a>
+					      				<a href="shop-homepage"><img src="img/but13.jpg"></a>
 					      			</div>
 						      		<div class="info">
-						      			<p>Tên sản phẩm</p>
-						      			<h4>300000</h4>
-						      		</div>
+										<h4>BÚT MỰC ĐỎ</h4>
+										<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. quod omnis sed aperiam sit veniam molestias, dicta sint doloremque dolore unde placeat quos amet!</p>
+									</div>
 						      	</div>
 						    </div>
 							<div class="swiper-slide">
 					      		<div class="product">
 					      			<div class="themnail">
-					      				<a href="item/shop-item.html"><img src="img/but10.jpg"></a>
+					      				<a href="shop-homepage"><img src="img/but16.jpg"></a>
 					      			</div>
 						      		<div class="info">
-						      			<p>Tên sản phẩm</p>
-						      			<h4>300000</h4>
-						      		</div>
+										<h4>BÚT MỰC TÍM</h4>
+										<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. quod omnis sed aperiam sit veniam molestias, dicta sint doloremque dolore unde placeat quos amet!</p>
+									</div>
 						      	</div>
 						    </div>
 					        <div class="swiper-slide">
 					      		<div class="product">
 					      			<div class="themnail">
-					      				<a href="item/shop-item.html"><img src="img/but10.jpg"></a>
+					      				<a href="shop-homepage"><img src="img/but15.jpg"></a>
 					      			</div>
 						      		<div class="info">
-						      			<p>Tên sản phẩm</p>
-						      			<h4>300000</h4>
-						      		</div>
+										<h4>BÚT MỰC TÍM</h4>
+										<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. quod omnis sed aperiam sit veniam molestias, dicta sint doloremque dolore unde placeat quos amet!</p>
+									</div>
 						      	</div>
 						    </div>
 					  </div>
@@ -295,49 +293,39 @@
 					<div class="mochi-style-slider row">
 	        			<div class="col-md-6">
 		            		<div class="item">
-								<a href="item/item.html"><img class="lazyload" src="img/but5.jpg"/></a>
+								<a href="shop-homepage"><img class="lazyload" src="img/but5.jpg"/></a>
 								<div class="post-info">
 									<h4>
-										<a class="post-item-link" href="item/item.html">COMBO5</a>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
 									</h4>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="item">
-								<a href="item/item.html"><img class="lazyload" src="img/but5.jpg"/></a>
+								<a href="shop-homepage"><img class="lazyload" src="img/but6.jpg"/></a>
 								<div class="post-info">
-									<h4>
-										<a class="post-item-link" href="item/item.html">COMBO5</a>
-									</h4>
+									<p> Magnam sint architecto tempore expedita consequuntur enim.</p>
 								</div>
 							</div>
 							<div class="item">
-								<a href="item/item.html"><img class="lazyload" src="img/but5.jpg"/></a>
+								<a href="shop-homepage"><img class="lazyload" src="img/but13.jpg"/></a>
 								<div class="post-info">
-									<h4>
-										<a class="post-item-link" href="item/item.html">COMBO5</a>
-									</h4>
+									<p>consectetur adipisicing elit. Eos est, excepturi nisi omnis dolor necessita</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="item">
-								<a href="item/item.html"><img class="lazyload" src="img/but6.jpg"/></a>
+								<a href="shop-homepage"><img class="lazyload" src="img/but8.jpg"/></a>
 								<div class="post-info">
-									<h4>
-										<a class="post-item-link" href="item/item.html">COMBO5</a>
-									</h4>
+									<p> Quidem sit incidunt commodi pariatur explicabo autem!</p>
 								</div>
 							</div>
 							<div class="item">
-								<a href="item/item.html"><img class="lazyload" src="img/but5.jpg"/></a>
+								<a href="shop-homepage"><img class="lazyload" src="img/but16.jpg"/></a>
 								<div class="post-info">
-									<h4>
-										<!-- home/product/category/ -->
-										<a class="post-item-link" href="#">COMBO5</a>
-									</h4>
-								</div>
+									<p> Itaque, quo dolores asperiores dicta distinctio sint assumenda fuga!</p>								</div>
 							</div>
 						</div>
 					</div>
@@ -433,12 +421,10 @@
 					</div>
 					<div class="foot-form-wrap">
 						<h4>ĐỂ LẠI THÔNG TIN VÀ NHẬN ƯU ĐÃI</h4>
-						<p style="color: #576574;">Chương trình chỉ áp dụng với những mochi-er ghé shop lần đầu tiên.</p>
-						<div class="foot-form">
-							<label></label>
+						<p style="color: #576574;">Chương trình chỉ áp dụng với những mochi-er ghé shop lần đầu tiên.</p>						
 							<input type="email" name="email" placeholder="mochi@gmail.com">
 							<input type="submit" name="submit" value="Submit">
-						</div>
+						
 					</div>
 				</div>
 				
@@ -466,7 +452,7 @@
 					</div>
 
 					<div class="col col-md-3">
-						<h2>NEW&EVENT</h2>
+						<h2>EVENT</h2>
 						<ul>
 							<li><a href="#">Tin hoạt động</a></li>
 							<li><a href="#">Mẹo vặt</a></li>

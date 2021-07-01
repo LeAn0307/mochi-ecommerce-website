@@ -1,3 +1,10 @@
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+h1{
+  text-align: center;
+}
 #navBtnCart {
   display: none;
 }
@@ -190,7 +197,7 @@ footer {
 #foot .foot-form input:nth-child(3) {
   background: #e99fb6;
 }
-<<<<<<< Updated upstream
+
 
 #foot .row {
   display: flex;
@@ -203,8 +210,7 @@ footer {
 #foot span:nth-child(2) {
   color: #e58e26;
 }
-#foot .row h2 {
-}
+
 #foot .row ul {
   list-style: none;
 }
@@ -226,7 +232,7 @@ footer {
   color: #576574;
 }
 @media (max-width: 850px) {
-=======
+
 body{
 	background: #ffffff;
 }
@@ -269,7 +275,7 @@ header .head .menu ul li a:hover
 {
 	color: #4056BF;
 	border-bottom: solid #4056BF 2px;
->>>>>>> Stashed changes
+
 }
 /* footer */
 
@@ -348,7 +354,7 @@ footer{
 	 background: #e99fb6;
 }
 
-<<<<<<< Updated upstream
+
 @media (max-width: 650px) {
   #foot .row {
     flex-direction: column;
@@ -362,7 +368,7 @@ footer{
 .container {
   width: 2000px;
 }
-=======
+
 #foot .row{
 	display: flex;
 }
@@ -374,9 +380,7 @@ footer{
 #foot span:nth-child(2){
 	color: #e58e26;
 }
-#foot .row h2{
-	
-}
+
 #foot .row ul{
 	list-style: none;
 }
@@ -412,6 +416,4 @@ footer{
 		padding-bottom: 20px;
 	}
 }
-
-
->>>>>>> Stashed changes
+}
