@@ -202,6 +202,11 @@ header .carousel {
   background: #fff;
   border: solid 5px #fff;
 }
+.blogger img{
+  border-radius: 15%;
+  height: 200px;
+  width: 150px;
+}
 .blogger .info {
   background: #fdf2ff;
 }
