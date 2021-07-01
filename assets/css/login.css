@@ -1,0 +1,36 @@
+.Nut {
+  background: #e99fb6;
+  border-color: #e99fb6;
+  color: black;
+  border-radius: 15px;
+  border-radius: 15px 15px;
+  border-radius: 15px 15px 15px;
+  border-radius: 15px 15px 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+.Nut:hover {
+  background: #a9d2ff;
+  color: #000;
+  border-color: #a9d2ff;
+}
+.form {
+  border-radius: 20px;
+  border-radius: 20px 20px;
+  border-radius: 20px 20px 20px;
+  border-radius: 20px 20px 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20x;
+}
+#navBtnCart {
+  display: none;
+}
+#navBtnAvatar1 {
+  display: none;
+}
+#navBtnLogIn {
+  display: none;
+}
+#navBtnSignUp {
+  display: none;
+}

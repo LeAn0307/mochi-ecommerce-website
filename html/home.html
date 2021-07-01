@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mochi</title>
+	<!-- lib-icon -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- lib-font -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+  	<!-- lib-css -->
+  	<link rel="stylesheet" type="text/css" href="css/home.css">
+  	<!-- link-swiper-slider -->
+  	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<!-- link-boostrap4 -->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script>
+
+</head>
+<body>
+	<header >
+		<!-- navbar: logo, menu -->
+		<nav class="navbar navbar-expand-md bg-white fixed-top" id="header">
+		  <a class="logo navbar-brand px-5" href="/"><img id="logo" src="img/rsz_logo.png"></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="background: #E99FB6;">
+		    <span class="navbar-toggler-icon">☰</span>
+		  </button>
+		  <div class="menu collapse navbar-collapse" id="collapsibleNavbar">
+		    <ul class="navbar-nav">
+		      <li class="nav-item">
+		        <a class="nav-link" href="home">TRANG CHỦ</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="blog">GIỚI THIỆU</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="shop-homepage">CỬA HÀNG</a>
+		      </li> 
+		      <li class="nav-item">
+		        <a class="nav-link" href="blog">TIN TỨC</a>
+		      </li> 
+		      <li class="nav-item">
+		        <a class="nav-link" href="contact">LIÊN HỆ</a>
+		      </li>
+			<li class="nav-item" >
+				<a class="nav-link" href="shop-cart" id="navBtnCart">
+					<i class="fa fa-shopping-cart" aria-hidden="true"style="position: relative;">
+                		<div class="number" id="number"></div>
+					</i>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="login" id="navBtnLogIn">ĐĂNG NHẬP</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="sign_up" id="navBtnSignUp">ĐĂNG KÝ</a>
+			</li>
+		      <!-- <li class="nav-item">
+		        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+		      </li> -->
+		      
+			  <li class="nav-item" id="navBtnAvatar1">
+				<div class="dropdown">
+					<img class=" rounded-circle btn p-0 dropdown-toggle" id="navBtnAvatar" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false" src="img/no_user.png" width="36" height="36">
+					</img>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="left: -590%;">
+						<a class="dropdown-item" href="profile">
+							Thông tin cá nhân
+						</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#" onclick="logOutOnClick()">
+							Đăng xuất
+						</a>
+					</div>
+				</div>
+			  </li>
+
+		    </ul>
+			
+		  </div>  
+		</nav>
+
+		<!-- banner: carousel -->
+		<div id="banner" class="carousel slide" data-ride="carousel">
+		  	<!-- Indicators -->
+		  	<ul class="carousel-indicators">
+		    	<li data-target="#demo" data-slide-to="0" class="active"></li>
+		    	<li data-target="#demo" data-slide-to="1"></li>
+		    	<li data-target="#demo" data-slide-to="2"></li>
+		  	</ul>
+		  
+		  	<!-- The slideshow -->
+		  	<div class="carousel-inner">
+			    <div class="carousel-item active">
+			      <img src="img/banner4.jpg" alt="Los Angeles" width="100%" height="550">
+			    </div>
+			    <div class="carousel-item">
+			      <img src="img/banner6.jpg" alt="Chicago" width="100%" height="550">
+			    </div>
+			    
+			    <div class="carousel-item">
+			      <img src="img/banner5.jpg" alt="New York" width="100%" height="550">
+			    </div>
+			</div>
+		  
+			<!-- Left and right controls -->
+			<a class="carousel-control-prev" href="#banner" data-slide="prev">
+		    <span class="carousel-control-prev-icon"></span>
+		  	</a>
+		  	<a class="carousel-control-next" href="#banner" data-slide="next">
+		    <span class="carousel-control-next-icon"></span>
+		  	</a>
+		</div>
+		
+	</header>
+	<main>
+		<section>
+			<div id="category" class="container" style="padding-top:7em">
+				<div class="wrap four-icon">
+					<div class="row">
+						<div class="col-md-3 col-sm-2 col-6 col-xs-5">
+							<div class="item-icon">
+								<!-- -->
+								<a title="Brand Image" href="products/shop-homepage.html">
+									<img src="img/combo1.png">
+								</a>
+							</div>
+						</div>
+			
+						<div class="col-md-3 col-sm-2 col-6 col-xs-7">
+							<div class="item-icon">
+								<!-- product/category -->
+								<a title="Brand Image" href="products/shop-homepage.html">
+									<img src="img/combo2.png" alt="Brand Image">
+								</a>
+								
+							</div>
+						</div>
+				
+						<div class="col-md-3 col-sm-2 col-6 col-xs-5">
+							<div class="item-icon">
+								<!-- product/category -->
+								<a title="Brand Image" href="products/shop-homepage.html" >
+									<img src="img/combo3.png" alt="Brand Image">
+								</a>
+								
+							</div>
+						</div>
+				
+						<div class="col-md-3 col-sm-2 col-6 col-xs-7">
+							<div class="item-icon">
+								<!-- product/category -->
+								<a title="Brand Image" href="products/shop-homepage.html">
+									<img src="img/combo4.png" alt="Brand Image">
+								</a>
+							   
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<div id="flashSale">
+				<div class="flash-sale-frist-item container">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="flash-sale-white-bg">
+								<div class="flash-sale-time">
+									<div class="time" id="clock">
+										<span id="Hour">00</span>
+										<p>:</p>
+										<span id="Min">00</span>
+										<p>:</p>
+										<span id="Sec">00</span>		
+									</div>
+								</div>
+								<!-- flash-sale khong doi img -->
+								<a href="products/shop-homepage.html"><img src="img/flash-sale-img.jpg"></a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="flash-sale-logo">
+								<img src="img/flash-sale-logo1.png">
+								<h1>SIÊU ƯU ĐÃI TỦ STICKER</h1>
+								<button>BUY NOW</button>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div id="newProduct">
+				<h2>NEW PRODUCTS</h2>
+				<div class="new-product container">
+
+					<div class="swiper-container">
+					    <div class="swiper-wrapper">
+							<div class="swiper-slide">
+					      		<div class="product">
+					      			<div class="themnail">
+					      				<a href="item/shop-item.html"><img src="img/but10.jpg"></a>
+					      			</div>
+						      		<div class="info">
+						      			<p>Tên sản phẩm</p>
+						      			<h4>300000</h4>
+						      		</div>
+						      	</div>
+						    </div>
+					      	<div class="swiper-slide">
+					      		<div class="product">
+					      			<div class="themnail">
+					      				<a href="item/shop-item.html"><img src="img/but10.jpg"></a>
+					      			</div>
+						      		<div class="info">
+						      			<p>Tên sản phẩm</p>
+						      			<h4>300000</h4>
+						      		</div>
+						      	</div>
+						    </div>
+
+					        <div class="swiper-slide">
+					      		<div class="product">
+					      			<div class="themnail">
+					      				<a href="item/shop-item.html"><img src="img/but10.jpg"></a>
+					      			</div>
+						      		<div class="info">
+						      			<p>Tên sản phẩm</p>
+						      			<h4>300000</h4>
+						      		</div>
+						      	</div>
+						    </div>
+					      	<div class="swiper-slide">
+					      		<div class="product">
+					      			<div class="themnail">
+					      				<a href="item/shop-item.html"><img src="img/but10.jpg"></a>
+					      			</div>
+						      		<div class="info">
+						      			<p>Tên sản phẩm</p>
+						      			<h4>300000</h4>
+						      		</div>
+						      	</div>
+						    </div>
+							<div class="swiper-slide">
+					      		<div class="product">
+					      			<div class="themnail">
+					      				<a href="item/shop-item.html"><img src="img/but10.jpg"></a>
+					      			</div>
+						      		<div class="info">
+						      			<p>Tên sản phẩm</p>
+						      			<h4>300000</h4>
+						      		</div>
+						      	</div>
+						    </div>
+					        <div class="swiper-slide">
+					      		<div class="product">
+					      			<div class="themnail">
+					      				<a href="item/shop-item.html"><img src="img/but10.jpg"></a>
+					      			</div>
+						      		<div class="info">
+						      			<p>Tên sản phẩm</p>
+						      			<h4>300000</h4>
+						      		</div>
+						      	</div>
+						    </div>
+					  </div>
+					 
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>
+		</section>
+		
+		<section>
+			<div id="mochiStyle">	
+    			<div class="mochi-style-blog container">
+        			<div class="mochi-style-title"> 
+        				<h2>MOCHI STYLE</h2>
+        			</div>
+					<div class="mochi-style-slider row">
+	        			<div class="col-md-6">
+		            		<div class="item">
+								<a href="item/item.html"><img class="lazyload" src="img/but5.jpg"/></a>
+								<div class="post-info">
+									<h4>
+										<a class="post-item-link" href="item/item.html">COMBO5</a>
+									</h4>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="item">
+								<a href="item/item.html"><img class="lazyload" src="img/but5.jpg"/></a>
+								<div class="post-info">
+									<h4>
+										<a class="post-item-link" href="item/item.html">COMBO5</a>
+									</h4>
+								</div>
+							</div>
+							<div class="item">
+								<a href="item/item.html"><img class="lazyload" src="img/but5.jpg"/></a>
+								<div class="post-info">
+									<h4>
+										<a class="post-item-link" href="item/item.html">COMBO5</a>
+									</h4>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="item">
+								<a href="item/item.html"><img class="lazyload" src="img/but6.jpg"/></a>
+								<div class="post-info">
+									<h4>
+										<a class="post-item-link" href="item/item.html">COMBO5</a>
+									</h4>
+								</div>
+							</div>
+							<div class="item">
+								<a href="item/item.html"><img class="lazyload" src="img/but5.jpg"/></a>
+								<div class="post-info">
+									<h4>
+										<!-- home/product/category/ -->
+										<a class="post-item-link" href="#">COMBO5</a>
+									</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</section>
+		<section>
+			<div id="review" >
+				<div class="container">
+					<h2>BLOGGER</h2>
+					<div class="row">
+						<div class="col-md-3 col-sm-2 col-6 col-xs-5">
+							<div class="blogger">
+								<a title="Blogger Image" href="#">
+									<img src="img/ICON-01.png">
+								</a>
+								<div class="info">
+									<a title="Name" href="home">ĐÂY LÀ BÚT
+									</a>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+								</div>
+							</div>
+						</div>
+			
+						<div class="col-md-3 col-sm-2 col-6 col-xs-7">
+							<div class="blogger">
+								<a title="Blogger Image" href="#">
+									<img src="img/ICON-01.png">
+								</a>
+								<div class="info">
+									<a title="Name" href="#">ĐÂY LÀ BÚT
+									</a>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+								</div>
+							</div>
+						</div>
+				
+						<div class="col-md-3 col-sm-2 col-6 col-xs-5">
+							<div class="blogger">
+								<a title="Blogger Image" href="#">
+									<img src="img/ICON-01.png">
+								</a>
+								<div class="info">
+									<a title="Name" href="#">ĐÂY LÀ BÚT
+									</a>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+								</div>
+							</div>
+						</div>
+				
+						<div class="col-md-3 col-sm-2 col-6 col-xs-7">
+							<div class="blogger">
+								<a title="Blogger Image" href="#">
+									<img src="img/ICON-01.png">
+								</a>
+								<div class="info">
+									<a title="Name" href="#">ĐÂY LÀ BÚT
+									</a>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+
+		<section>
+			<div id="join">
+				<div class="form container">
+					<input type="text" name="" placeholder="Enter your address">
+					<button>Submit</button>
+				</div>
+				
+			</div>
+		</section>
+	</main>
+
+	<footer>	
+		<div id="foot">
+			<div class="foot-logo">
+			</div>
+			<div class="footer container">
+				<div class="foot-wrap">
+					<div class="contain">
+						<h2>MOCHI</h2>
+						<p style="color: #576574;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+						</p>
+						
+					</div>
+					<div class="foot-form-wrap">
+						<h4>ĐỂ LẠI THÔNG TIN VÀ NHẬN ƯU ĐÃI</h4>
+						<p style="color: #576574;">Chương trình chỉ áp dụng với những mochi-er ghé shop lần đầu tiên.</p>
+						<div class="foot-form">
+							<label></label>
+							<input type="email" name="email" placeholder="mochi@gmail.com">
+							<input type="submit" name="submit" value="Submit">
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col col-md-3">
+						<h2>FOLLOW</h2>
+						<ul>
+						<!-- href="#" => home -->
+							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>    Facebook</a></li>
+							<li><a href="#"><i class="fa fa-youtube" aria-hidden="true">   Youtube</i></a></li>
+							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>   Instagram</a></li>
+							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>   Twitter</a></li>
+						</ul>
+					</div>
+					
+					<div class="col col-md-2">
+						<h2>MENU</h2>
+						<ul>
+							<li><a href="home/home.html">Trang chủ</a></li>
+							<li><a href="blog/blog.html">Giới thiệu</a></li>
+							<li><a href="product/shop-homepage.html">Cửa hàng</a></li>
+							<li><a href="blog/blog.html">Tin tức</a></li>
+							<li><a href="contact/contact.html">Liên hệ</a></li>
+						</ul>
+					</div>
+
+					<div class="col col-md-3">
+						<h2>NEW&EVENT</h2>
+						<ul>
+							<li><a href="#">Tin hoạt động</a></li>
+							<li><a href="#">Mẹo vặt</a></li>
+							<li><a href="#">Khuyến mãi</a></li>
+							<li><a href="#">Sự kiện</a></li>
+							
+						</ul>
+					</div>
+
+					<div class="col col-md-4">
+						<h2>CONTACT</h2>
+						<div class="address">
+							<ul>
+								<!-- href="#" => home -->
+								<li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>Trường Đại học Công nghệ Thông tin</a></li>
+								<li><a href="#"><i class="fa fa-location-arrow" aria-hidden="true"></i>Khu phố 6, phường Linh Trung, thành phố Thủ Đức</a></li>
+								<li><a href="#"><i class="fa fa-phone-square" aria-hidden="true"></i>123456789</a></li>
+								<li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>linhdatran3@gmail.com</a></li>
+							</ul>
+						</div>
+						
+					</div>
+					
+					
+				</div>
+			</div>
+			<div class="foot">
+				<p>@Bản quyền thuộc về "Mắc mệt à"</p>
+			</div>
+		</div>
+		</div>
+	</footer>
+		<script src="js/base.js"></script>
+
+	<script>
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+		  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) 
+		  {
+		    document.getElementById("header").style.height = "12vh";
+		    document.getElementById("header").style.backgroundColor="#A9D2FF !important";
+		    document.getElementById("logo").src="img/logo150x80.png";
+		  } 
+		  else 
+		  {
+		    document.getElementById("header").style.height = "20vh";
+		    document.getElementById("logo").src="img/rsz_logo.png";
+		    document.getElementById("header").style.backgroundColor="#fff !important";
+		  }
+		}
+		function Dong_ho() {
+	         var gio = document.getElementById("Hour");
+	         var phut = document.getElementById("Min");
+	         var giay = document.getElementById("Sec");
+	         var Gio_hien_tai = new Date().getHours();
+	         var Phut_hien_tai = new Date().getMinutes();
+	         var Giay_hien_tai = new Date().getSeconds();
+	         gio.innerHTML = Gio_hien_tai;
+	         phut.innerHTML = Phut_hien_tai;
+	         giay.innerHTML = Giay_hien_tai;
+	    }
+	    var Dem_gio = setInterval(Dong_ho, 1000);
+
+		
+		  var swiper = new Swiper('.swiper-container', {
+	      slidesPerView: 4,
+	      spaceBetween: 30,
+	      slidesPerGroup: 1,
+	      loop: true,
+	      loopFillGroupWithBlank: true,
+	      pagination: {
+	        el: '.swiper-pagination',
+	        clickable: true,
+	      },
+	      navigation: {
+	        nextEl: '.swiper-button-next',
+	        prevEl: '.swiper-button-prev',
+	      },
+	    });
+
+	    function getDirection() {
+	      var windowWidth = window.innerWidth;
+	      var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+	      return direction;
+	    }
+	 </script>
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>blog</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="css/blog.css">
+
+  <!-- font -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <!-- lib-icon -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- link-boostrap4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script>
+
+</head> 
+
+<body>
+
+  <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-md bg-white fixed-top" id="header">
+            <a class="logo navbar-brand px-5" href="/"><img id="logo" src="img/rsz_logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="background: #E99FB6;">
+                <span class="navbar-toggler-icon">☰</span>
+            </button>
+            <div class="menu collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="home">TRANG CHỦ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="blog">GIỚI THIỆU</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="shop-homepage">CỬA HÀNG</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="blog">TIN TỨC</a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact">LIÊN HỆ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="shop-cart" id="navBtnCart">
+                      <i class="fa fa-shopping-cart" aria-hidden="true" style="position: relative;">
+                        <div class="number" id="number"></div>
+                      </i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="login" id="navBtnLogIn">ĐĂNG NHẬP</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sign_up" id="navBtnSignUp">ĐĂNG KÝ</a>
+                  </li>
+                  <!-- <li class="nav-item">
+                  		        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                  		      </li> -->
+                  
+                  <li class="nav-item" id="navBtnAvatar1">
+                    <div class="dropdown">
+                      <img class=" rounded-circle btn p-0 dropdown-toggle" id="navBtnAvatar" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" src="img/no_user.png" width="36" height="36">
+                      </img>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="left: -590%;">
+                        <a class="dropdown-item" href="profile">
+                          Thông tin cá nhân
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" onclick="logOutOnClick()">
+                          Đăng xuất
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+
+
+                </ul>
+          </div>  
+        </nav>
+    </header>
+
+  <!-- Danh muc-->
+    <div class="container" style="padding-top: 10rem; background-color: white;">
+        <div class="row" style="padding-top: 1rem">
+            <div class="col-sm-3 sidenav" style="background-color: white;">
+                    <h4>Mochi Blog</h4>
+                    <!-- <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="#section1">Home</a></li>
+                        <li><a href="#section2">Friends</a></li>
+                        <li><a href="#section3">Family</a></li>
+                        <li><a href="#section3">Photos</a></li>
+                    </ul><br> -->
+                    <!-- <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search Blog..">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div> -->
+            </div>
+            <div class="col-sm-9">
+                    <h4><small>RECENT POSTS</small></h4>
+                    <hr>
+                    <h2>I Love Food</h2>
+                    <h5></span> Post by Jane Dane, Sep 27, 2015.</h5>
+                    <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
+                    <p>Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <br><br>
+                    <img src="img\but15.jpg">
+                    <h4><small>RECENT POSTS</small></h4>
+                    <hr>
+                    <h2>Officially Blogging</h2>
+                    <h5><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h5>
+                    <h5><span class="label label-success">Lorem</span></h5><br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                        officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <hr>
+                    <img src="img\but12.jpg" style="height: 500px;width: 600px;">
+
+                    <h4>Leave a Comment:</h4>
+                    <form role="form">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                    <br><br>
+
+                    <p><span class="badge">2</span> Comments:</p><br>
+
+                    <div class="row">
+                        <div class="img\14.jpger">
+                            <img src="img\but9.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+                        </div>
+                        <div class="col-sm-10">
+                            <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
+                            <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <br>
+                        </div>
+                        <div class="col-sm-2 text-center">
+                            <img src="img\but10.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+                        </div>
+                        <div class="col-sm-10">
+                            <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
+                            <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua.</p>
+                            <br>
+                            <p><span class="badge">1</span> Comment:</p><br>
+                            <div class="row">
+                                <div class="col-sm-2 text-center">
+                                    <img src="img\but5.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+                                </div>
+                                <div class="col-xs-10">
+                                    <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
+                                    <p>Me too! WOW!</p>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+  
+  <!-- Footer -->
+  <footer>
+    <div id="foot">
+      <div class="foot-logo">
+        <img src="img/logo150x80.png">
+      </div>
+      <div class="footer container">
+        <div class="foot-wrap">
+          <div class="contain">
+            <h3>MOCHI</h3>
+            <p style="color: #576574;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            </p>
+
+          </div>
+          <div class="foot-form-wrap">
+            <h4>ĐỂ LẠI THÔNG TIN VÀ NHẬN ƯU ĐÃI</h4>
+            <p style="color: #576574;">Chương trình chỉ áp dụng với những mochi-er ghé shop lần đầu tiên.</p>
+            <div class="foot-form">
+              <label></label>
+              <input type="email" name="email" placeholder="mochi@gmail.com">
+              <input type="submit" name="submit" value="Submit">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-3">
+            <h3>FOLLOW</h3>
+            <ul>
+              <!-- href="#" => home -->
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+              <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"> Youtube</i></a></li>
+              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+            </ul>
+          </div>
+
+          <div class="col col-md-2">
+            <h3>MENU</h3>
+            <ul>
+              <li><a href="home">Trang chủ</a></li>
+              <li><a href="blog">Giới thiệu</a></li>
+              <li><a href="product">Cửa hàng</a></li>
+              <li><a href="home">Tin tức</a></li>
+
+            </ul>
+          </div>
+
+          <div class="col col-md-3">
+            <h3>NEW&EVENT</h3>
+            <ul>
+              <li><a href="home">Tin hoạt động</a></li>
+              <li><a href="home">Mẹo vặt</a></li>
+              <li><a href="home">Khuyến mãi</a></li>
+              <li><a href="home">Sự kiện</a></li>
+
+            </ul>
+          </div>
+
+          <div class="col col-md-4">
+            <h3>CONTACT</h3>
+            <div class="address">
+              <ul>
+                <!-- href="#" => home -->
+                <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>Trường Đại học Công nghệ Thông
+                    tin</a></li>
+                <li><a href="#"><i class="fa fa-location-arrow" aria-hidden="true"></i>Khu phố 6, phường Linh Trung,
+                    thành phố Thủ Đức</a></li>
+                <li><a href="#"><i class="fa fa-phone-square" aria-hidden="true"></i>123456789</a></li>
+                <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>linhdatran3@gmail.com</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+      <div class="foot">
+        <p>@Bản quyền thuộc về "Mắc mệt à"</p>
+      </div>
+    </div>
+    </div>
+  </footer>
+  <script src="js/base.js"></script>
+
+  
+  <script>
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("header").style.height = "12vh";
+        document.getElementById("header").style.backgroundColor = "#A9D2FF !important";
+        document.getElementById("logo").src = "img/logo150x80.png";
+      }
+      else {
+        document.getElementById("header").style.height = "18vh";
+        document.getElementById("logo").src = "img/rsz_logo.png";
+        document.getElementById("header").style.backgroundColor = "#fff !important";
+      }
+    }
+  </script>
+
+</body>
+
+</html>

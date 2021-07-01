@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Mochi-SignUp</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/admin_signup.css" rel="stylesheet">
+    <script defer src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script defer src="/js/admin_base.js"></script>
+    <script defer src="/js/admin_signup.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div id="Name"></div>
+    <div id="navBtnAvatar1"></div>
+    <div class="contentbody bg-white text-center">
+        <div class="contentLogin mt-4" style="text-align: -webkit-center;">
+            <div class="d-inline-flex txtSignUp">Đăng ký tài khoản Admin Mochi</div>
+            <div class="panel1" style="width: 460px;">
+                <form>
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="InputName">Họ và tên</label>
+                        <input type="text" class="form-control form-controlInput" id="InputName" placeholder="Nhập Họ và tên của bạn">
+                        <span class="icon-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="InputEmail">Email</label>
+                        <input type="email" class="form-control form-controlInput" id="InputEmail"
+                            aria-describedby="emailHelp" placeholder="Nhập email của bạn">
+                        <span class="icon-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="InputPassword">Mật khẩu</label>
+                        <input type="password" class="form-control form-controlInput" id="InputPassword"
+                            placeholder="Nhập mật khẩu của bạn">
+                        <span class="icon-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="InputPassword">Xác nhận lại mật khẩu</label>
+                        <input type="password" class="form-control form-controlInput" id="InputPassword1"
+                            placeholder="Nhập lại mật khẩu của bạn">
+                    </div>
+
+                    
+
+                    <!-- Address -->
+                    <div class="form-group">
+                        <label for="InputAddress">Địa chỉ</label>
+                        <input type="text" class="form-control form-controlInput" id="InputAddress"
+                            placeholder="Nhập Địa chỉ hiện tại của bạn">
+                        <span class="icon-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="InputSdt">Số điện thoại</label>
+                        <input class="form-control form-controlInput" type="number" id="Inputsdt"
+                            placeholder="Nhập số điện thoại của bạn">
+                        <span class="icon-error"></span>
+                    </div>
+
+                    
+                    <button type="button" class="btn btn-dark btndangky" onclick="signUpButton()">Xác nhận</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

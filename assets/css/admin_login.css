@@ -1,0 +1,159 @@
+.logovamenu {
+  border-bottom: 2px solid #c6c6c663;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+  border-bottom: 1px solid #908f8f;
+}
+
+li.nav-item {
+  margin-left: 10px;
+}
+
+ul li.nav-item a.nav-link.btn img {
+  width: 35px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+
+a.nav-link.btn {
+  padding: 0px 0px;
+}
+
+div#navbarTogglerDemo02 {
+  font-weight: bold;
+}
+
+.form-inlinesearch {
+  border-bottom: 1px solid black;
+  max-width: fit-content;
+  /* border-left: 1px solid black; */
+}
+
+input.form-controlsearch {
+  border: none;
+  background-color: #f8f9fa;
+  width: 250px;
+  margin-left: 10px;
+}
+
+form div img {
+  width: 20px;
+}
+
+a.navbar-brand.col-lg-3 {
+  margin: 0px;
+  text-align: -webkit-right;
+}
+
+.col-lg-7.row {
+  padding: 0px;
+  margin: 0px;
+  justify-content: center;
+}
+
+input:focus {
+  outline: 0;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+img.imageIcon {
+  width: 25px;
+  padding: 0px;
+  margin: 0px;
+}
+
+button.btn.btn-light.btnReg {
+  margin-left: 10px;
+  border: 1px solid black;
+}
+
+.txtbtnreg {
+  margin-top: 25px;
+}
+
+button.btn.btn-light.btnApple {
+  width: -webkit-fill-available;
+  height: 45px;
+  margin-top: 15px;
+  border: 1px solid black;
+}
+
+button.btn.btn-light.btnFacebook {
+  width: -webkit-fill-available;
+  border: 1px solid black;
+  margin-top: 15px;
+  height: 45px;
+}
+
+button.btn.btn-light.btnGoogle {
+  width: -webkit-fill-available;
+  border: 1px solid black;
+  height: 45px;
+}
+
+.d-inline-flex.txtOr {
+  width: -webkit-fill-available;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.contentbody.bg-white.text-center {
+  padding-bottom: 40px;
+}
+
+button.btn.btn-dark {
+  width: -webkit-fill-available;
+  background: black;
+  color: white;
+  height: 45px;
+}
+
+.d-inline-flex.txtWelcome {
+  margin-top: 100px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+span.icon-error {
+  right: 10px;
+  top: 43px;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='8' cy='8' r='7.25' stroke='%23df4a32' stroke-width='1.5'/%3E%3Cg fill='%23df4a32'%3E%3Cpath d='M7.5 12.5v-1.547h1.456V12.5zM7.526 6.429V3.4H8.93v3.029l-.169 3.497H7.695z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  position: absolute;
+  display: none;
+}
+
+.form-group {
+  position: relative;
+}
+
+a.forgotPass {
+  float: right;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 8px;
+  color: #002bff;
+  font-size: 14px;
+}
+
+label {
+  float: left;
+}
+
+.contentLogin {
+  display: inline-block;
+  width: 460px;
+}

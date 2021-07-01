@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/contact.css" type="text/css">
+
+    <!-- link-boostrap4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script>
+</head>
+<body>
+    <header >
+        <!-- navbar: logo, menu -->
+        <nav class="navbar navbar-expand-md bg-white fixed-top" id="header">
+          <a class="logo navbar-brand px-5" href="/"><img id="logo" src="img/rsz_logo.png"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="background: #E99FB6;">
+            <span class="navbar-toggler-icon">☰</span>
+          </button>
+          <div class="menu collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="home">TRANG CHỦ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog">GIỚI THIỆU</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop-homepage">CỬA HÀNG</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="blog">TIN TỨC</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="contact">LIÊN HỆ</a>
+              </li>
+              
+            <li class="nav-item">
+                <a class="nav-link" href="shop-cart" id="navBtnCart">
+                    <i class="fa fa-shopping-cart" aria-hidden="true" style="position: relative;">
+                        <div class="number" id="number"></div>
+                    </i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login" id="navBtnLogIn">ĐĂNG NHẬP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sign_up" id="navBtnSignUp">ĐĂNG KÝ</a>
+            </li>
+            <!-- <li class="nav-item">
+            		        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+            		      </li> -->
+            
+            <li class="nav-item" id="navBtnAvatar1">
+                <div class="dropdown">
+                    <img class=" rounded-circle btn p-0 dropdown-toggle" id="navBtnAvatar" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false" src="img/no_user.png" width="36" height="36">
+                    </img>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="left: -590%;">
+                        <a class="dropdown-item" href="profile">
+                            Thông tin cá nhân
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" onclick="logOutOnClick()">
+                            Đăng xuất
+                        </a>
+                    </div>
+                </div>
+            </li>
+            </ul>
+          </div>  
+        </nav>
+
+         
+    </header>
+    <!-- Map Begin -->
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49116.39176087041!2d-86.41867791216099!3d39.69977417971648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886ca48c841038a1%3A0x70cfba96bf847f0!2sPlainfield%2C%20IN%2C%20USA!5e0!3m2!1sen!2sbd!4v1586106673811!5m2!1sen!2sbd"
+            height="500" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="map-inside">
+            <i class="icon_pin"></i>
+            <div class="inside-widget">
+                <h4>ĐẠI HỌC CÔNG NGHỆ THÔNG TIN</h4>
+                <ul>
+                    <li>Phone: +84-345-6789</li>
+                    <li>Add:khu phố 6, phường Linh Trung, thành phố Thủ Đức.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Map End -->
+<!-- Contact Section Begin -->
+    <section class="contact spad" style="background-color: #fff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+                    <div class="contact__widget">
+                        <span class="icon_phone"></span>
+                        <h4>Phone</h4>
+                        <p>+01-3-8888-6868</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+                    <div class="contact__widget">
+                        <span class="icon_pin_alt"></span>
+                        <h4>Address</h4>
+                        <p>60-49 Road 11378 New York</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+                    <div class="contact__widget">
+                        <span class="icon_clock_alt"></span>
+                        <h4>Open time</h4>
+                        <p>10:00 am to 23:00 pm</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+                    <div class="contact__widget">
+                        <span class="icon_mail_alt"></span>
+                        <h4>Email</h4>
+                        <p>hello@colorlib.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+    
+
+    <!-- Contact Form Begin -->
+    <div class="contact-form spad" style="background-color: #fff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="contact__form__title">
+                        <h2>Leave Message</h2>
+                    </div>
+                </div>
+            </div>
+            <form action="#">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <input type="text" placeholder="Your name">
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <input type="text" placeholder="Your Email">
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <textarea placeholder="Your message"></textarea>
+                        <button type="submit" class="site-btn">SEND MESSAGE</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Contact Form End -->
+
+    <footer>    
+        <div id="foot">
+            <div class="foot-logo">
+                <img src="img/logo150x80.png">
+            </div>
+            <div class="footer container">
+                <div class="foot-wrap">
+                    <div class="contain">
+                        <h2>MOCHI</h2>
+                        <p style="color: #576574;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                        </p>
+                        
+                    </div>
+                    <div class="foot-form-wrap">
+                        <h4>ĐỂ LẠI THÔNG TIN VÀ NHẬN ƯU ĐÃI</h4>
+                        <p style="color: #576574;">Chương trình chỉ áp dụng với những mochi-er ghé shop lần đầu tiên.</p>
+                        <div class="foot-form">
+                            <label></label>
+                            <input type="email" name="email" placeholder="mochi@gmail.com">
+                            <input type="submit" name="submit" value="Submit">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col col-md-3">
+                        <h2>FOLLOW</h2>
+                        <ul>
+                        <!-- href="#" => home -->
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>    Facebook</a></li>
+                            <li><a href="#"><i class="fa fa-youtube" aria-hidden="true">   Youtube</i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i>   Instagram</a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>   Twitter</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col col-md-2">
+                        <h2>MENU</h2>
+                        <ul>
+                            <li><a href="home">Trang chủ</a></li>
+                            <li><a href="blog">Giới thiệu</a></li>
+                            <li><a href="shop-homepage">Cửa hàng</a></li>
+                            <li><a href="blog">Tin tức</a></li>
+                            <li><a href="contact">Liên hệ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col col-md-3">
+                        <h2>NEW&EVENT</h2>
+                        <ul>
+                            <li><a href="#">Tin hoạt động</a></li>
+                            <li><a href="#">Mẹo vặt</a></li>
+                            <li><a href="#">Khuyến mãi</a></li>
+                            <li><a href="#">Sự kiện</a></li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="col col-md-4">
+                        <h2>CONTACT</h2>
+                        <div class="address">
+                            <ul>
+                                <!-- href="#" => home -->
+                                <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>Trường Đại học Công nghệ Thông tin</a></li>
+                                <li><a href="#"><i class="fa fa-location-arrow" aria-hidden="true"></i>Khu phố 6, phường Linh Trung, thành phố Thủ Đức</a></li>
+                                <li><a href="#"><i class="fa fa-phone-square" aria-hidden="true"></i>123456789</a></li>
+                                <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>linhdatran3@gmail.com</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="foot">
+                <p>@Bản quyền thuộc về "Mắc mệt à"</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script src="js/base.js"></script>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+          if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) 
+          {
+            document.getElementById("header").style.height = "12vh";
+            document.getElementById("header").style.backgroundColor="#A9D2FF !important";
+            document.getElementById("logo").src="img/logo150x80.png";
+          } 
+          else 
+          {
+            document.getElementById("header").style.height = "20vh";
+            document.getElementById("logo").src="img/rsz_logo.png";
+            document.getElementById("header").style.backgroundColor="#fff !important";
+          }
+        }
+     </script>
+
+</body>
+</html>

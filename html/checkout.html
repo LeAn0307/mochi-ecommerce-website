@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ogani | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/css/shop-cart.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    <!-- link-boostrap4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <!-- navbar: logo, menu -->
+        <nav class="navbar navbar-expand-md bg-white fixed-top" id="header">
+            <a class="logo navbar-brand px-5" href="/"><img id="logo" src="img/rsz_logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+                style="background: #E99FB6;">
+                <span class="navbar-toggler-icon">☰</span>
+            </button>
+            <div class="menu collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home">TRANG CHỦ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog">GIỚI THIỆU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop-homepage">CỬA HÀNG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog">TIN TỨC</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact">LIÊN HỆ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop-cart" id="navBtnCart">
+                            <i class="fa fa-shopping-cart" aria-hidden="true" style="position: relative;">
+                                <div class="number" id="number"></div>
+                            </i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login" id="navBtnLogIn">ĐĂNG NHẬP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sign_up" id="navBtnSignUp">ĐĂNG KÝ</a>
+                    </li>
+                    <!-- <li class="nav-item">
+    		        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+    		      </li> -->
+    
+                    <li class="nav-item" id="navBtnAvatar1">
+                        <div class="dropdown">
+                            <img class=" rounded-circle btn p-0 dropdown-toggle" id="navBtnAvatar" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" src="img/no_user.png" width="36" height="36">
+                            </img>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="left: -590%;">
+                                <a class="dropdown-item" href="profile">
+                                    Thông tin cá nhân
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" onclick="logOutOnClick()">
+                                    Đăng xuất
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+    
+                </ul>
+    
+            </div>
+        </nav>
+    
+    </header>
+    <!-- Checkout Section Begin -->
+    <section class="checkout spad">
+        <div class="container">
+            <div class="checkout__form">
+                <h4>Chi tiết đơn hàng:</h4>
+                <form action="#">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-6">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Họ và tên:<span>*</span></p>
+                                        <input type="text" id="name1">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Giới tính:<span>*</span></p>
+                                        <!-- <input type="text"> -->
+                                        <select id = "gender">
+                                            <option value="nam" selected>Nam</option>
+                                            <option value="nu" >Nữ</option>
+                                            <option value="khac" >Khác</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout__input">
+                                <p>Địa chỉ:<span>*</span></p>
+                                <input type="text" placeholder="Street Address" class="checkout__input__add" id="address">
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Điện thoại:<span>*</span></p>
+                                        <input type="text" id="phone">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Email<span>*</span></p>
+                                        <input type="text" id="email1">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-lg-5 col-md-6">
+                            <div class="checkout__order">
+                                <h4>Đơn hàng của bạn:</h4>
+                                <div class="checkout__order__products">Sản phẩm <span>Total</span></div>
+                                <ul id="listItem">
+                                    
+                                </ul>
+                                <div class="checkout__order__subtotal">Subtotal <span id="subtotal"></span></div>
+                                <div class="checkout__order__total">Total <span id="total"></span></div>
+                        
+                                <button type="button" class="site-btn" onclick=OnSubmit()>Xác nhận</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Checkout Section End -->
+
+    <footer>
+        <div id="foot">
+            <div class="foot-logo">
+            </div>
+            <div class="footer container">
+                <div class="foot-wrap">
+                    <div class="contain">
+                        <h2>MOCHI</h2>
+                        <p style="color: #576574;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        </p>
+    
+                    </div>
+                    <div class="foot-form-wrap">
+                        <h4>ĐỂ LẠI THÔNG TIN VÀ NHẬN ƯU ĐÃI</h4>
+                        <p style="color: #576574;">Chương trình chỉ áp dụng với những mochi-er ghé shop lần đầu tiên.</p>
+                        <div class="foot-form">
+                            <label></label>
+                            <input type="email"  placeholder="mochi@gmail.com">
+                            <input type="submit"  value="Submit">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col col-md-3">
+                        <h2>FOLLOW</h2>
+                        <ul>
+                            <!-- href="#" => home -->
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"> Youtube</i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="col col-md-2">
+                        <h2>MENU</h2>
+                        <ul>
+                            <li><a href="home/home.html">Trang chủ</a></li>
+                            <li><a href="blog/blog.html">Giới thiệu</a></li>
+                            <li><a href="product/shop-homepage.html">Cửa hàng</a></li>
+                            <li><a href="blog/blog.html">Tin tức</a></li>
+                            <li><a href="contact/contact.html">Liên hệ</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="col col-md-3">
+                        <h2>NEW&EVENT</h2>
+                        <ul>
+                            <li><a href="#">Tin hoạt động</a></li>
+                            <li><a href="#">Mẹo vặt</a></li>
+                            <li><a href="#">Khuyến mãi</a></li>
+                            <li><a href="#">Sự kiện</a></li>
+    
+                        </ul>
+                    </div>
+    
+                    <div class="col col-md-4">
+                        <h2>CONTACT</h2>
+                        <div class="address">
+                            <ul>
+                                <!-- href="#" => home -->
+                                <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>Trường Đại học Công nghệ
+                                        Thông tin</a></li>
+                                <li><a href="#"><i class="fa fa-location-arrow" aria-hidden="true"></i>Khu phố 6, phường
+                                        Linh Trung, thành phố Thủ Đức</a></li>
+                                <li><a href="#"><i class="fa fa-phone-square" aria-hidden="true"></i>123456789</a></li>
+                                <li><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>linhdatran3@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+    
+                    </div>
+    
+    
+                </div>
+            </div>
+            <div class="foot">
+                <p>@Bản quyền thuộc về "Mắc mệt à"</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script src="/js/base.js"></script>
+    <script src="/js/checkout.js"></script>
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("header").style.height = "12vh";
+                document.getElementById("header").style.backgroundColor = "#A9D2FF !important";
+                document.getElementById("logo").src = "img/logo150x80.png";
+            }
+            else {
+                document.getElementById("header").style.height = "20vh";
+                document.getElementById("logo").src = "img/rsz_logo.png";
+                document.getElementById("header").style.backgroundColor = "#fff !important";
+            }
+        }
+    </script>
+ 
+
+</body>
+
+</html>

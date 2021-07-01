@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/login.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid"
+        style="height: 100vh;background-image: url(img/bg8.jpg);background-repeat: no-repeat;background-size: cover;">
+
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <br>
+                <br>
+                <div class="container form" style="border-style: outset;border-width: 5px;
+                                            padding-top: 2em;
+                                            background-image: none;
+                                            background-color: white;">
+                    <form style="padding-bottom: 3em;padding-left: 2em;padding-right: 2em ; ">
+                        <!-- #fce5df;"> -->
+                        <h1 style="text-align: center;">Đăng Nhập</h1>
+                        <br>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Tên đăng nhập:</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="mochi@gmail.com">
+                            <small id="emailHelp" class="form-text text-muted">*Nhập địa chỉ email</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Mật khẩu:</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label style="padding-bottom: 2em;" class="form-check-label" for="exampleCheck1">Ghi nhớ
+                                đăng
+                                nhập</label>
+                        </div>
+                        <div style="text-align: center;">
+
+                            <button type="button" class="btn btn-info Nut" onclick = Log_in()>
+                            <!-- Khi nhấn đăng nhập hiện trang chủ -->
+                                Đăng nhập
+                            </button>
+
+                        </div>
+                        <div style="padding-top: 2em;text-decoration: rgb(219, 155, 219);">Bạn mới biết đến Mochi? <a
+                                href="/sign_up">Đăng ký ngay</a></div>
+                                <!-- đi qua trang đăng ký -->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+
+    </div>
+    <script src="js/base.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

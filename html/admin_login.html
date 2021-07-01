@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Mochi-Login</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="/css/admin_login.css" rel="stylesheet">
+    <script defer src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script defer src="/js/admin_base.js"></script>
+    <script defer src="/js/admin_login.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-md bg-white fixed-top" id="header">
+            <a class="logo navbar-brand px-5" href="/admin/login"><img id="logo" src="/img/rsz_logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+                style="background: #E99FB6;">
+                <span class="navbar-toggler-icon">☰</span>
+            </button>
+            <div class="menu collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="Name"></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                		        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                		      </li> -->
+    
+                    <li class="nav-item" id="navBtnAvatar1">
+                    </li>
+    
+    
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="contentbody bg-white text-center mt-5">
+        <div class="contentLogin mt-4">
+            <div class="d-inline-flex txtWelcome">Chào mừng trở lại Admin Mochi</div>
+            <form>
+                <div class="form-group">
+                    <label for="InputEmail">Tên đăng nhập</label>
+                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp"
+                        placeholder="Nhập tên đăng nhập của bạn" tabindex="1">
+                    <span class="icon-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="InputPassword">Mật khẩu</label>
+                    <a class="forgotPass" href="forgot-password">Quên mật khẩu?</a>
+                    <input type="password" class="form-control" id="InputPassword" placeholder="Nhập mật khẩu của bạn"
+                        tabindex="2">
+                    <span class="icon-error"></span>
+                </div>
+
+                <button type="button" class="btn btn-dark dangnhap" onclick="BtnLogInTapped()">Đăng nhập</button>
+            </form>
+            <div class="txtbtnreg">
+                <div class="d-inline-flex txtNotYet">Bạn chưa có tài khoản?</div>
+                <button type="submit" class="btn btn-light btnReg" onclick="signUpTapped()">Đăng ký</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

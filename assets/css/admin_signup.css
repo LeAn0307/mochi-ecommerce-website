@@ -1,0 +1,291 @@
+.logovamenu {
+  border-bottom: 2px solid #c6c6c663;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+  border-bottom: 1px solid #908f8f;
+}
+
+li.nav-item {
+  margin-left: 10px;
+}
+
+ul li.nav-item a.nav-link.btn img {
+  width: 35px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+
+a.nav-link.btn {
+  padding: 0px 0px;
+}
+
+div#navbarTogglerDemo02 {
+  font-weight: bold;
+}
+
+.form-inlinesearch {
+  border-bottom: 1px solid black;
+  max-width: fit-content;
+  /* border-left: 1px solid black; */
+}
+
+input.form-controlsearch {
+  border: none;
+  background-color: #f8f9fa;
+  width: 250px;
+  margin-left: 10px;
+}
+
+form div img {
+  width: 22px;
+  height: 22px;
+  padding: 0px;
+  margin: 0px;
+}
+
+a.navbar-brand.col-lg-3 {
+  margin: 0px;
+  text-align: -webkit-right;
+}
+
+.col-lg-7.row {
+  padding: 0px;
+  margin: 0px;
+  justify-content: center;
+}
+
+/* phần đăng ký */
+
+input#fileInput {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.groupUpFile {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.containerUpfile {
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid black;
+  width: -webkit-fill-available;
+  float: left;
+  height: 200px;
+  overflow: scroll;
+}
+
+button.question img {
+  width: 25px;
+  height: 25px;
+}
+
+button.question {
+  border: none;
+  background: none;
+  padding: 0px;
+  margin: 0px;
+  float: left;
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+span.icon-correct {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  display: none;
+  top: 38px;
+  right: 7px;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+}
+
+span.icon-error {
+  right: 10px;
+  top: 43px;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg height='16' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='8' cy='8' r='7.25' stroke='%23df4a32' stroke-width='1.5'/%3E%3Cg fill='%23df4a32'%3E%3Cpath d='M7.5 12.5v-1.547h1.456V12.5zM7.526 6.429V3.4H8.93v3.029l-.169 3.497H7.695z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  position: absolute;
+  display: none;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group label {
+  float: left;
+}
+
+.contentbody.bg-white.text-center {
+  padding-bottom: 40px;
+}
+
+button.btn.btn-dark {
+  width: -webkit-fill-available;
+  background: rgb(68, 68, 68);
+  color: white;
+  height: 45px;
+}
+
+.d-inline-flex.txtSignUp {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contentLogin {
+  display: inline-block;
+}
+
+/* Phần thêm vào */
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+@keyframes example {
+  from {
+    background-color: white;
+    color: black;
+    left: 0px;
+    top: 0px;
+  }
+  to {
+    background-color: #7df7af;
+    left: 0px;
+    top: 60px;
+  }
+}
+
+input:focus {
+  outline: 0;
+}
+
+.EmailThongbao {
+  margin-top: 0px;
+  margin-bottom: 100px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+
+button.btnquaylai.btn.btn-secondary {
+  width: 120px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+button.btnxacnhan.btn.btn-success {
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+input#defaultCheck1 {
+  float: left;
+}
+
+.dongydieukhoan {
+  margin-top: 40px;
+}
+
+input#maxacthuc {
+  margin-right: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 1px grey;
+  text-align: center;
+}
+
+.maxacthuc {
+  display: inline-flex;
+  margin-top: 15px;
+}
+
+.txtmaxacthuc {
+  width: fit-content;
+  align-self: center;
+  margin-right: 10px;
+}
+
+.xacthucsdt {
+  display: -webkit-inline-box;
+  -webkit-box-pack: center;
+  margin-bottom: 3px;
+}
+
+.sdtxacthuc {
+  /* width: fit-content; */
+  margin-left: 5px;
+  /* font-weight: bold; */
+}
+
+button.btn.btn-dark.btndangky {
+  margin-top: 25px;
+}
+
+div.groupUpFile .hinh {
+  width: 80px;
+  height: 100px;
+  display: block;
+  background: #c8c7c7;
+  margin-top: 5px;
+  margin-left: 5px;
+  text-align: -webkit-center;
+  font-size: 59px;
+  user-select: none;
+  float: left;
+}
+
+div.groupUpFile .hinh:hover {
+  background: gray;
+  display: block;
+}
+
+.hinh:hover {
+  opacity: 0.4;
+  border: 1px solid white;
+}
+
+.thumb {
+  margin-left: 10px;
+  position: relative;
+  z-index: 999;
+  /* border: 1px solid #000000; */
+  height: 100px;
+  width: auto;
+  margin-top: 5px;
+}
+
+.thumb:hover {
+  filter: brightness(0.5);
+}
+
+.time {
+  position: absolute;
+  margin-left: -12px;
+  z-index: 999;
+  cursor: pointer;
+  background-color: #010101;
+  color: white;
+  margin-top: 6px;
+}
+
+.csshinhanh {
+  position: relative;
+  z-index: 0;
+}

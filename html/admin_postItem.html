@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Ogani Template">
+	<meta name="keywords" content="Ogani, unica, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Admin-Mochi-PostItem</title>
+	
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+	
+	<!-- Css Styles -->
+	<link rel="stylesheet" href="/css/admin_postItem.css" type="text/css">
+	<link rel="stylesheet" href="/css/style.css" type="text/css">
+	<link rel="stylesheet" href="/css/shop-cart.css" type="text/css">
+	<!-- link-boostrap4 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script>
+		<script defer src="/js/jquery-3.3.1.min.js"></script>
+		<script defer src="/vendor/jquery/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script defer src="/js/admin_base.js"></script>
+	<script defer src="/js/admin_postItem.js"></script>
+
+</head>
+
+<body>
+	<!-- header -->
+	<header>
+		<nav class="navbar navbar-expand-md bg-white fixed-top" id="header">
+			<a class="logo navbar-brand px-5" href="/admin/home"><img id="logo" src="/img/rsz_logo.png"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+				style="background: #E99FB6;">
+				<span class="navbar-toggler-icon">☰</span>
+			</button>
+			<div class="menu collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="admin/home">TRANG CHỦ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#" id="Name"></a>
+					</li>
+					<!-- <li class="nav-item">
+	            		        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+	            		      </li> -->
+	
+					<li class="nav-item" id="navBtnAvatar1">
+						<div class="dropdown">
+							<img class=" rounded-circle btn p-0 dropdown-toggle" id="navBtnAvatar" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false" src="/img/no_user.png" width="36" height="36">
+							</img>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="left: -590%;">
+								<a class="dropdown-item" href="/admin/profile">
+									Thông tin cá nhân
+								</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#" onclick="logOutOnClick()">
+									Đăng xuất
+								</a>
+							</div>
+						</div>
+					</li>
+	
+	
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<div class="mt-5"><br />
+		
+		<div class="col-12" style="display:block;" >
+			<br />
+			<form class="form-horizontal" name="basicInfo">
+
+				<div class="container">
+					<div class="row d-flex justify-content-between mt-md-3 mt-xl-5 mb-2">
+						<div class="container col-md-12 col-lg-9 w-100 pl-md-5">
+							<h2 class="pl-md-5 text-xs-center text-sm-center text-md-center text-lg-left">
+								Đăng món hàng
+							</h2>
+						</div>
+						<div class="col-md-12 col-lg-3 justify-content-between">
+							<button type="button" class="btn btn-primary ml-2" id="submit" onclick=Submit()>ĐĂNG</button>
+						</div>
+					</div>
+					
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="container">
+
+		<div class="col-12 postObjectPanel" id="detailPanel" >
+			<div class="col-sm-12 col-lg-6 float-md-left float-sm-none">
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label">Tên đồ vật:</label>
+						<div class="col-md-12">
+							<input id="stuffName" for="stuffName" name="stuffName" type="text"
+								placeholder="nhập vào tên đồ vật" class="form-control" required="">
+						</div>
+					</div>
+
+					<!-- Select Basic -->
+					<div class="form-group">
+						<label class="col-md-4 control-label">Danh mục đồ vật:</label>
+						<div class="col-md-12">
+							<select id="category" for="category" name="category" class="form-control">
+								<option value="1">Bút</option>
+								<option value="2">Giấy note</option>
+								<option value="3">Túi đựng</option>
+								<option value="4">Màu nước</option>
+								<option value="5">Đồ thủ công</option>
+								<option value="6">Khác</option>
+								
+							</select>
+						</div>
+					</div>
+
+					<!-- Appended Input-->
+
+					<div class="form-group">
+						<label class="col-md-4 control-label">Giá/1 cái</label>
+						<div class=" col-md-12 col-lg-12">
+							<div class="input-group">
+								<input type="number" name="cost" id="cost" class="form-control form-conrol input-md"
+									placeholder="">
+								
+							</div>
+						</div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+						<label class="col-md-4 control-label">Số lượng:</label>
+						<div class="col-md-12">
+							<input id="quantity" name="quantity" for="quantity" type="number"
+								class="form-control input-md" required="">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-4 control-label">Chiều dài (cm):</label>
+						<div class="col-md-12">
+							<input id="length1" name="length" for="length" type="number" class="form-control input-md" required="">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-4 control-label">Chiều rộng (cm):</label>
+						<div class="col-md-12">
+							<input id="width" name="width" for="width" type="number" class="form-control input-md" required="">
+						</div>
+					</div>
+
+					
+
+			</div>
+			<div class="col-sm-12 col-lg-6 float-md-left float-sm-none">
+				<div class="form-group">
+					<label class="col-md-4 control-label">Xuất xứ:</label>
+					<div class="col-md-12">
+						<input id="origin1" name="origin" for="origin" type="text" class="form-control input-md" required="">
+					</div>
+				</div>
+				<!-- Text input-->
+				<div class="form-group w-100">
+					<label class="col-md-12 control-label" for="images">Hình ảnh đồ vật:</label>
+					<div class="col-12">
+						<div class="containerUpfile">
+							<div class="groupUpFile">
+								<div class="hinh">+</div>
+								<div id="previewImg"> </div>
+								<input style="display: none" type=file id="files" name="image" multiple />
+							</div>
+							<div class="containerFile js-file-list"></div>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div style="height:auto;">
+						<!-- Text input-->
+						<div class="form-group w-100">
+							<label class="col-md-12 control-label">Mô tả đồ vật:</label>
+							<div class="col-12">
+								<textarea style="height: 200px;" id="describe" name="description" for="description" class="col-12"
+									rows="20" cols="64"
+									placeholder="Hãy thêm các mô tả để món đồ trở nên rõ ràng và thu hút hơn"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			
+
+		</div>
+	</div>
+	</div>
+	<script>
+		window.onscroll = function () { scrollFunction() };
+		function scrollFunction() {
+			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+				document.getElementById("header").style.height = "12vh";
+				document.getElementById("header").style.backgroundColor = "#A9D2FF !important";
+				document.getElementById("logo").src = "/img/logo150x80.png";
+			}
+			else {
+				document.getElementById("header").style.height = "19vh";
+				document.getElementById("logo").src = "/img/rsz_logo.png";
+				document.getElementById("header").style.backgroundColor = "#fff !important";
+			}
+		}
+	</script>
+</body>
+
+</html>

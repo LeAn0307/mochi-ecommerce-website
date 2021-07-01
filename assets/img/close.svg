@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>close popup@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-560.000000, -302.000000)" fill="#000000">
+            <path d="M570,311.285714 L579.285714,302 L580,302.714286 L570.714286,312 L580,321.285714 L579.285714,322 L570,312.714286 L560.714286,322 L560,321.285714 L569.285714,312 L560,302.714286 L560.714286,302 L570,311.285714 Z" id="close-popup"></path>
+        </g>
+    </g>
+</svg>
