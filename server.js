@@ -1,5 +1,8 @@
 const express = require("express");
+
+//A Node.js module for finding the URL of a web site's favicon.
 const favicon = require("serve-favicon");
+// Phan mem trung gian phan tich body 
 const bodyParser = require("body-parser");
 
 // create application/x-www-form-urlencoded parser
@@ -15,8 +18,11 @@ const commentHandler = require("./server_handlers/user/comment_user_handler");
 const CartHandler = require("./server_handlers/user/cart_user_handler");
 const BillHandler = require("./server_handlers/user/bill_user_handler");
 
+//là bản sao chính xác của mô-đun NodeJS
 const path = require("path");
-const multer = require("multer"); //cài đặt  dependencie
+//Multer là một phần mềm trung gian của node.js để xử lý dữ liệu, chủ yếu được sử dụng để tải tệp lên
+const multer = require("multer"); 
+//Security holding package - Goi bao mat
 const fs = require("fs");
 
 const dbHelper = require("./server_handlers/database_helper");
@@ -25,6 +31,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(favicon("assets/img/fav.png"));
+//__dirname is an environment variable that tells you the absolute(tuyet doi) path of the directory containing the currently executing file.
 app.use(express.static(__dirname + "/assets/"));
 app.use("/images", express.static(path.join(__dirname, "images")));
 app.use(
