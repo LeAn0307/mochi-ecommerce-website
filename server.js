@@ -5,12 +5,16 @@ const favicon = require("serve-favicon");
 // Phan mem trung gian phan tich body
 const bodyParser = require("body-parser");
 
-// create application/x-www-form-urlencoded parser
+// form (dang khac) => js obj
 const urlencodedParser = bodyParser.urlencoded({
   extended: false,
 });
-
+// json la string => js object
 const jsonParser = bodyParser.json();
+
+// ham xu ly cho tung route
+//require giôngs import. Lấy dữ liệu các file vào 
+
 const userHandler = require("./server_handlers/user/account_user_handler");
 const adminHandler = require("./server_handlers/admin/account_admin_handler");
 const itemHandler = require("./server_handlers/admin/item_handler");

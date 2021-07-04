@@ -55,11 +55,12 @@ function searchDocument(collection, name) {
     MongoClient.connect(url, function (err, db) {
       if (err) resolve(false);
       var dbo = db.db("mochi");
-      dbo.collection(collection).createIndex({
-        name: "text",
-        category: "text",
-      });
-      var query = { $text: { $search: name } }; //,$caseSensitive: false,$diacriticSensitive: false
+      // dbo.collection(collection).createIndex({
+      //   name: "text",
+      //   category: "text",
+      // });
+      // var query = { $text: { $search: name } }; //,$caseSensitive: false,$diacriticSensitive: false
+      var query = { category: { $regex: name } };
       dbo
         .collection(collection)
         .find(query)
