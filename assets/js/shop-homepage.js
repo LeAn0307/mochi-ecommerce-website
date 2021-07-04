@@ -44,7 +44,7 @@ async function init() {
 
     var div3 = document.createElement("div");
     div3.className = "card-body";
-    var h1 = document.createElement("h4");
+    var h1 = document.createElement("h5");
     h1.className = "card-title";
     var a1 = document.createElement("a");
     a1.href = "/shop-item/" + r[i].id;
@@ -52,7 +52,7 @@ async function init() {
     div3.appendChild(h1);
     h1.appendChild(a1);
 
-    var h2 = document.createElement("h4");
+    var h2 = document.createElement("h5");
     h2.innerHTML = r[i].cost + " VNĐ";
     var div4 = document.createElement("div");
     div4.className = "fas fa-shopping-cart market";

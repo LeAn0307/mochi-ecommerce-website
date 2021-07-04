@@ -11,18 +11,18 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="/css/shop-homepage.css">
-    
+
     <!-- font -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    
+
     <!-- lib-icon -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <!-- link-boostrap4 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script>
 
-    
+
     <script defer src="/js/admin_base.js"></script>
     <script defer src="/js/admin_home.js"></script>
 
@@ -86,12 +86,12 @@
     <!-- Shoping Cart Section Begin -->
     <div class="container product-wrapper"
         style="max-width: 2000px;width:80%;padding-top: 9rem;padding-bottom:2rem;background: #fff">
-    
+
         <div class="row">
             <!-- /.col-lg-3 category -->
             <div class="col-lg-3 category">
-    
-                <h1 class="my-4">Shop Name</h1>
+
+                <h1 class="my-4" style='font-size: 24pt;font-weight: 800;  color: #4c90e4; text-shadow: 0 0 3px #6ad2ec;'>Mochi</h1>
                 <div class="list-group">
                     <a href="/admin/home/Bút" class="list-group-item">Bút các loại</a>
                     <a href="/admin/home/Giấy note" class="list-group-item">Giấy note cute</a>
@@ -100,45 +100,46 @@
                     <a href="/admin/home/Đồ thủ công" class="list-group-item">Đồ thủ công</a>
                     <a href="/admin/home/Khác" class="list-group-item">Khác</a>
                 </div>
-    
+
             </div>
-    
+
             <!-- /.col-lg-9 product & product banner -->
             <div class="col-lg-9">
                 <!-- product_banner -->
-                <div id="chuaCoStuff" class="stuff1" style="text-align: center;font-size: 27px;">Xin lỗi. Chưa có sản phẩm của danh mục này hoặc thử lại với từ khoá khác</div>
+                <div id="chuaCoStuff" class="stuff1" style="text-align: center;font-size: 27px;">Xin lỗi. Chưa có sản
+                    phẩm của danh mục này hoặc thử lại với từ khoá khác</div>
 
                 <!-- product -->
                 <div id="item" class="row">
-                    
-                <!-- /.row -->
+
+                    <!-- /.row -->
+                </div>
+
+
             </div>
-    
-    
+            <!-- /.row -->
+
         </div>
-        <!-- /.row -->
-    
-    </div>
-    <!-- Shoping Cart Section End -->
-    <script>
-        window.onscroll = function () { scrollFunction() };
-        function scrollFunction() {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                document.getElementById("header").style.height = "12vh";
-                document.getElementById("header").style.backgroundColor = "#A9D2FF !important";
-                document.getElementById("logo").src = "/img/logo150x80.png";
+        <!-- Shoping Cart Section End -->
+        <script>
+            window.onscroll = function () { scrollFunction() };
+            function scrollFunction() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    document.getElementById("header").style.height = "12vh";
+                    document.getElementById("header").style.backgroundColor = "#A9D2FF !important";
+                    document.getElementById("logo").src = "/img/logo150x80.png";
+                }
+                else {
+                    document.getElementById("header").style.height = "19vh";
+                    document.getElementById("logo").src = "/img/rsz_logo.png";
+                    document.getElementById("header").style.backgroundColor = "#fff !important";
+                }
             }
-            else {
-                document.getElementById("header").style.height = "19vh";
-                document.getElementById("logo").src = "/img/rsz_logo.png";
-                document.getElementById("header").style.backgroundColor = "#fff !important";
-            }
-        }
-    </script>
+        </script>
 
 
 
-    
+
 
 
 </body>
