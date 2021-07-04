@@ -15,11 +15,11 @@ async function init() {
     console.log(url);
   }
 
-  const url1 = "/search/nameStuff/" + url;
+  const url1 = "/search/nameStuff/" + url; 
   console.log(url1);
   const response = await fetch(url1, {
     method: "GET",
-  });
+  }); 
   r = await response.json();
   console.log(r);
   if (r.length === 0 || r == false) {

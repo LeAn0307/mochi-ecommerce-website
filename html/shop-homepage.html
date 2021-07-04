@@ -38,61 +38,62 @@
   <header>
     <nav class="navbar navbar-expand-md bg-white fixed-top" id="header">
       <a class="logo navbar-brand px-5 " href="/"><img id="logo" src="img/rsz_logo.png"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="background: #E99FB6;">
-          <span class="navbar-toggler-icon">☰</span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+        style="background: #E99FB6;">
+        <span class="navbar-toggler-icon">☰</span>
       </button>
       <div class="menu collapse navbar-collapse px-5" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="home">TRANG CHỦ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="shop-homepage">CỬA HÀNG</a>
-            </li> 
-            <li class="nav-item">
-              <a class="nav-link" href="blog">TIN TỨC</a>
-            </li> 
-            <li class="nav-item">
-              <a class="nav-link" href="contact">LIÊN HỆ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="shop-cart" id="navBtnCart">
-                <i class="fa fa-shopping-cart" aria-hidden="true" style="position: relative;">
-                  <div class="number" id="number"></div>
-                </i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login" id="navBtnLogIn">ĐĂNG NHẬP</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sign_up" id="navBtnSignUp">ĐĂNG KÝ</a>
-            </li>
-            <!-- <li class="nav-item">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../home">TRANG CHỦ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../shop-homepage">CỬA HÀNG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../blog">TIN TỨC</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact">LIÊN HỆ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./shop-cart" id="navBtnCart">
+              <i class="fa fa-shopping-cart" aria-hidden="true" style="position: relative;">
+                <div class="number" id="number"></div>
+              </i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login" id="navBtnLogIn">ĐĂNG NHẬP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sign_up" id="navBtnSignUp">ĐĂNG KÝ</a>
+          </li>
+          <!-- <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                       </li> -->
-            
-            <li class="nav-item" id="navBtnAvatar1">
-              <div class="dropdown">
-                <img class=" rounded-circle btn p-0 dropdown-toggle" id="navBtnAvatar" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false" src="img/no_user.png" width="36" height="36">
-                </img>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="left: -590%;">
-                  <a class="dropdown-item" href="profile">
-                    Thông tin cá nhân
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#" onclick="logOutOnClick()">
-                    Đăng xuất
-                  </a>
-                </div>
+
+          <li class="nav-item" id="navBtnAvatar1">
+            <div class="dropdown">
+              <img class=" rounded-circle btn p-0 dropdown-toggle" id="navBtnAvatar" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" src="../img/no_user.png" width="36" height="36">
+              </img>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="left: -590%;">
+                <a class="dropdown-item" href="profile">
+                  Thông tin cá nhân
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" onclick="logOutOnClick()">
+                  Đăng xuất
+                </a>
               </div>
-            </li>
+            </div>
+          </li>
 
 
-          </ul>
-    </div>  
-  </nav>
+        </ul>
+      </div>
+    </nav>
   </header>
 
 
@@ -127,15 +128,16 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           </ol>
           <div id="list" class="carousel-inner" role="listbox">
-            <div class="carousel-item active">             
-              <img class="d-block img-fluid" src="images/banner3.PNG" alt="Third slide">              
+            <div class="carousel-item active">
+              <img class="d-block img-fluid" src="/images/banner3.PNG" alt="Third slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="https://ohay.vn/blog/wp-content/uploads/2020/02/shop-van-phong-pham-sai-gon-ava.jpg"
+              <img class="d-block img-fluid"
+                src="https://ohay.vn/blog/wp-content/uploads/2020/02/shop-van-phong-pham-sai-gon-ava.jpg"
                 alt="First slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="images/banner2.PNG" alt="Second slide">
+              <img class="d-block img-fluid" src="/images/banner2.PNG" alt="Second slide">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -148,11 +150,12 @@
           </a>
         </div>
         <!-- product -->
-        <div id="chuaCoStuff" class="stuff1" style="text-align: center;font-size: 27px;">Xin lỗi. Chưa có sản phẩm của danh mục
+        <div id="chuaCoStuff" class="stuff1" style="text-align: center;font-size: 27px;">Xin lỗi. Chưa có sản phẩm của
+          danh mục
           này hoặc thử lại với từ khoá khác</div>
 
         <div id="item" class="row">
-          
+
         </div>
         <!-- /.row -->
       </div>
@@ -168,7 +171,7 @@
   <footer>
     <div id="foot">
       <div class="foot-logo">
-        
+
       </div>
       <div class="footer container">
         <div class="foot-wrap">
@@ -247,8 +250,8 @@
     </div>
     </div>
   </footer>
-    <script src="/js/base.js"></script>
-    <script src="/js/shop-homepage.js"></script>
+  <script src="/js/base.js"></script>
+  <script src="/js/shop-homepage.js"></script>
   <script>
     window.onscroll = function () { scrollFunction() };
     function scrollFunction() {

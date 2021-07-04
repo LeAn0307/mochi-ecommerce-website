@@ -2,7 +2,7 @@ const express = require("express");
 
 //A Node.js module for finding the URL of a web site's favicon.
 const favicon = require("serve-favicon");
-// Phan mem trung gian phan tich body 
+// Phan mem trung gian phan tich body
 const bodyParser = require("body-parser");
 
 // create application/x-www-form-urlencoded parser
@@ -21,7 +21,7 @@ const BillHandler = require("./server_handlers/user/bill_user_handler");
 //là bản sao chính xác của mô-đun NodeJS
 const path = require("path");
 //Multer là một phần mềm trung gian của node.js để xử lý dữ liệu, chủ yếu được sử dụng để tải tệp lên
-const multer = require("multer"); 
+const multer = require("multer");
 //Security holding package - Goi bao mat
 const fs = require("fs");
 
@@ -315,6 +315,7 @@ app.get("/search/nameStuff/:name?", jsonParser, async (req, res) => {
   let stuffList;
   if (name) stuffList = await itemHandler.search(name);
   else stuffList = await dbHelper.findDocument("Item");
+  console.log(stuffList);
   res.send(stuffList);
 });
 //End Search
