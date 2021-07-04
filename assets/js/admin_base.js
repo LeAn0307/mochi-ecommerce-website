@@ -52,6 +52,8 @@ async function autoLoginWithToken() {
   return false;
 }
 
+
+
 async function getUserInfo(email) {
   let user = {
     email: email,

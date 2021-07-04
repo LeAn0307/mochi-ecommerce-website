@@ -8,15 +8,12 @@
   color: #4c90e4;
   font-weight: 600;
   font-size: 14pt;
- text-decoration: none;
+  text-decoration: none;
 }
 
-#logo{
-  
-
-    margin-left: 2em;
+#logo {
+  margin-left: 2em;
 }
-
 
 img {
   max-width: 100%;
@@ -63,6 +60,10 @@ h1 {
   background-color: #f1f21923;
   padding: 0px 6px;
   color: #dc08c6;
+}
+
+.card-title {
+  font-size: 14pt;
 }
 
 .card-footer {

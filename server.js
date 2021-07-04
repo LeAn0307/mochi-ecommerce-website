@@ -24,16 +24,16 @@ const BillHandler = require("./server_handlers/user/bill_user_handler");
 
 //là bản sao chính xác của mô-đun NodeJS
 const path = require("path");
-//Multer là một phần mềm trung gian của node.js để xử lý dữ liệu, chủ yếu được sử dụng để tải tệp lên
+//Multer chuyển file từ máy khác sang server
 const multer = require("multer");
-//Security holding package - Goi bao mat
+//tương tác với file 2 file server tuong tác với nhau
 const fs = require("fs");
 
 const dbHelper = require("./server_handlers/database_helper");
-
+//khởi tạo server
 const app = express();
 const port = process.env.PORT || 3000;
-
+///Use --> Thêm tính năng cho sẻrver
 app.use(favicon("assets/img/fav.png"));
 //__dirname is an environment variable that tells you the absolute(tuyet doi) path of the directory containing the currently executing file.
 app.use(express.static(__dirname + "/assets/"));
@@ -60,7 +60,7 @@ const upload = multer({
     }
   },
 }).single("image");
-
+//up anh len
 app.post("/images/upload", (req, res) => {
   upload(req, res, (err) => {
     if (err) {
@@ -75,7 +75,7 @@ app.post("/images/upload", (req, res) => {
     }
   });
 });
-
+// lay anh tu server gui xuong user 
 app.get("/images/:image_name", (req, res) => {
   const imagePath = path.join(__dirname, "images", req.params.image_name);
   try {
@@ -133,7 +133,9 @@ app.post("/log_out", jsonParser, async (req, res) => {
 
   res.send(result);
 });
-
+//
+// Gui ma dinh danh cho tung nguoi--> basejs cua user
+//
 app.post("/auth_by_token", jsonParser, async (req, res) => {
   console.log("Auth by token");
 
@@ -143,7 +145,9 @@ app.post("/auth_by_token", jsonParser, async (req, res) => {
 
   res.send(result);
 });
-
+//
+//  Lay thong tin tin user trong file base.js
+//
 app.post("/get_user_info", jsonParser, async (req, res) => {
   const body = req.body;
 
@@ -210,7 +214,10 @@ app.post("/admin/get_user_info", jsonParser, async (req, res) => {
 
 //End account Admin Handlers
 
+//
 //Item
+//
+//tao item moi
 app.post("/item/post", jsonParser, async (req, res) => {
   const body = req.body;
   const token = req.headers["token"];
@@ -220,10 +227,12 @@ app.post("/item/post", jsonParser, async (req, res) => {
   res.send({ id: await itemHandler.postItem(token, email, body) });
 });
 
+//Lay item -->Tra ve html cua item do
 app.get("/item/:itemId", async (req, res) => {
   res.sendFile(__dirname + "/html/item-info-page.html");
 });
 
+// Lay item tra ve json
 app.get("/item/id/:itemId", async (req, res) => {
   const itemId = req.params.itemId;
   const item = await itemHandler.getItem(itemId);
@@ -233,7 +242,11 @@ app.get("/item/id/:itemId", async (req, res) => {
 
 // End item
 
+//
 //Comment
+//
+
+//dang cmt, tao cmt
 app.post("/comment/post", jsonParser, async (req, res) => {
   const body = req.body;
   const token = req.headers["token"];
@@ -250,6 +263,7 @@ app.post("/comment/post", jsonParser, async (req, res) => {
   res.send(result);
 });
 
+//Lay cmt ve san pham
 app.get("/comment/id/:itemId", async (req, res) => {
   const itemId = req.params.itemId;
   const comment = await commentHandler.SearchComment(itemId);
@@ -258,8 +272,10 @@ app.get("/comment/id/:itemId", async (req, res) => {
 });
 
 //End comment
-//Cart
 
+//
+//      Cart
+//
 app.post("/cart/add", jsonParser, async (req, res) => {
   const body = req.body;
   const token = req.headers["token"];
@@ -313,7 +329,11 @@ app.post("/cart/update", jsonParser, async (req, res) => {
 });
 
 //End Cart
-//Search
+
+//
+//     Search
+//     theo the loai
+//
 app.get("/search/nameStuff/:name?", jsonParser, async (req, res) => {
   const name = req.params.name;
   let stuffList;
@@ -323,7 +343,11 @@ app.get("/search/nameStuff/:name?", jsonParser, async (req, res) => {
   res.send(stuffList);
 });
 //End Search
-//Checkout
+
+//
+//      Checkout
+//
+
 app.post("/bill/post", jsonParser, async (req, res) => {
   const body = req.body;
   const token = req.headers["token"];
@@ -344,6 +368,7 @@ app.post("/bill/post", jsonParser, async (req, res) => {
 });
 //End Checkout
 
+//render html 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/html/home.html");
 });
