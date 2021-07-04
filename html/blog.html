@@ -38,7 +38,7 @@
   <!-- header -->
   <header>
     <nav class="navbar navbar-expand-md bg-white fixed-top" id="header">
-      <a class="logo navbar-brand px-2 " href="/"><img id="logo" src="img/rsz_logo.png" style="margin-left: 3em;"></a>
+      <a class="logo navbar-brand px-2 " href="/"><img id="logo" src="img/rsz_logo.png" style="margin-left: 0em;"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
         style="background: #E99FB6;">
         <span class="navbar-toggler-icon">☰</span>
@@ -101,47 +101,46 @@
   <div class="container" style="padding-top: 8rem; background-color: transparent;">
     <div class="row" style="padding-top: 1rem">
       <div class="col-sm-3 sidenav" style="background-color: white;">
-        <h4>Mochi Blog</h4>
+        <h4 id="h4">Mochi Blog</h4>
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-            aria-controls="v-pills-home" aria-selected="true">Home</a>
-          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
-            aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
-            aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
-            aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+          <a style="    font-size: 14pt;
+                         font-weight: 500;
+                        color: #f7f7f7;" class="nav-link active" id="v-pills-home-tab" data-toggle="pill"
+            href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+          <a style="    font-size: 14pt;
+                         font-weight: 500;
+                        color: #4496dc;" class="nav-link" id="v-pills-profile-tab" data-toggle="pill"
+            href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+          <a style="    font-size: 14pt;
+                         font-weight: 500;
+                        color: #4496dc;" class="nav-link" id="v-pills-messages-tab" data-toggle="pill"
+            href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+          <a style="    font-size: 14pt;
+                         font-weight: 500;
+                        color: #4496dc;" class="nav-link" id="v-pills-settings-tab" data-toggle="pill"
+            href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
         </div>
-        <div class="tab-content" id="v-pills-tabContent">
-          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-            ...</div>
-          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...
-          </div>
-          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...
-          </div>
-          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...
-          </div>
-        </div>
+
       </div>
       <div class="col-sm-9">
-        <h4><small>RECENT POSTS</small></h4>
+        <h6><small>RECENT POSTS</small></h6>
         <hr>
-        <h2>I Love Food</h2>
-        <h5></span> Post by Jane Dane, Sep 27, 2015.</h5>
-        <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
-        <p>Food is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        <h4>I Love Paint</h4>
+        <h6></span> Post by Jane Dane, Sep 27, 2015.</h6>
+        <h6><span class="label label-danger">Paint</span> <span class="label label-primary">Ipsum</span></h6><br>
+        <p>Paint is my passion. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
           ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
           nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <br><br>
-        <img src="img\but15.jpg">
-        <h4><small>RECENT POSTS</small></h4>
+        <img style="width: 50%; height: 250px;" src="img\but15.jpg">
+        <h6><small>RECENT POSTS</small></h6>
         <hr>
-        <h2>Officially Blogging</h2>
-        <h5><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h5>
-        <h5><span class="label label-success">Lorem</span></h5><br>
+        <h4>Officially Blogging</h4>
+        <h6><span class="glyphicon glyphicon-time"></span> Post by John Doe, Sep 24, 2015.</h6>
+        <h6><span class="label label-success">Lorem</span></h6><br>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
           et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
@@ -149,12 +148,12 @@
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
           ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <hr>
-        <img src="img\but12.jpg" style="height: 500px;width: 600px;">
+        <img src="img\but12.jpg" style="    width: 50%;    height: 250px;">
 
-        <h4>Leave a Comment:</h4>
+        <h6>Leave a Comment:</h6>
         <form role="form">
           <div class="form-group">
-            <textarea class="form-control" rows="3" required></textarea>
+            <textarea class="form-control" rows="1" required></textarea>
           </div>
           <button type="submit" class="btn btn-success">Submit</button>
         </form>
@@ -167,7 +166,7 @@
             <img src="img\but9.jpg" class="img-circle" height="65" width="65" alt="Avatar">
           </div>
           <div class="col-sm-10">
-            <h4>Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
+            <h6>Anja <small>Sep 29, 2015, 9:12 PM</small></h6>
             <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur
               adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <br>
@@ -176,7 +175,7 @@
             <img src="img\but10.jpg" class="img-circle" height="65" width="65" alt="Avatar">
           </div>
           <div class="col-sm-10">
-            <h4>John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
+            <h6>John Row <small>Sep 25, 2015, 8:25 PM</small></h6>
             <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life.
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
               labore et dolore magna aliqua.</p>
@@ -187,7 +186,7 @@
                 <img src="img\but5.jpg" class="img-circle" height="65" width="65" alt="Avatar">
               </div>
               <div class="col-xs-10">
-                <h4>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
+                <h6>Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h6>
                 <p>Me too! WOW!</p>
                 <br>
               </div>
@@ -215,7 +214,7 @@
 
           </div>
           <div class="foot-form-wrap">
-            <h4>ĐỂ LẠI THÔNG TIN VÀ NHẬN ƯU ĐÃI</h4>
+            <h6>ĐỂ LẠI THÔNG TIN VÀ NHẬN ƯU ĐÃI</h6>
             <p style="color: #576574;">Chương trình chỉ áp dụng với những mochi-er ghé shop lần đầu tiên.</p>
             <div class="foot-form">
               <label></label>

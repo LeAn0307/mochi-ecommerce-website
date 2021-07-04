@@ -1,3 +1,6 @@
+//
+//Tự động đăng nhập
+//
 async function autoLoginWithToken() {
   let urlParamms = new URLSearchParams(window.location.search);
   let token = urlParamms.get("token");
