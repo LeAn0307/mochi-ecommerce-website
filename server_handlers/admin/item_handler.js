@@ -27,6 +27,17 @@ async function createItem(item) {
   }
   return false;
 }
+
+async function updateItem(item) {
+  let res = await dbHelper.updateDocument(itemCollection, item).catch((err) => {
+    console.log("Err: ", err);
+  });
+
+  if (res) {
+    return true;
+  }
+  return false;
+}
 class ItemHandler {
   static search = async function (name) {
     let res = await dbHelper
@@ -96,6 +107,43 @@ class ItemHandler {
       let created = await createItem(item);
 
       if (created) return item["id"];
+      else return 0;
+    }
+    return 0;
+  };
+
+  static updateItem = async function (token, email, body) {
+    let token1 = {
+      email: email,
+      token: token,
+    };
+    let res = await dbHelper
+      .findDocument(adminSessionCollection, token1)
+      .catch((err) => {
+        console.log(err);
+      });
+    if (res) {
+      let date = new Date();
+      let item = {
+        id: makeid(7),
+        email_admin: res[0]["email"],
+        name: body["name"],
+        category: body["category"],
+        cost: body["cost"],
+        quantity: body["quantity"],
+        length: body["length"],
+        width: body["width"],
+        origin: body["origin"],
+        describe: body["describe"],
+        create_date: date.getTime(),
+        path: body["path"],
+        star: 0,
+        reacted_people: 0,
+      };
+
+      let updated = await updateItem(item);
+
+      if (updated) return item["id"];
       else return 0;
     }
     return 0;

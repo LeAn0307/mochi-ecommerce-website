@@ -226,6 +226,15 @@ app.post("/item/post", jsonParser, async (req, res) => {
   if (token == null || token == "") return responseError(res);
   res.send({ id: await itemHandler.postItem(token, email, body) });
 });
+//capnhap item
+app.post("/item/update", jsonParser, async (req, res) => {
+  const body = req.body;
+  const token = req.headers["token"];
+  const email = req.headers["email"];
+
+  if (token == null || token == "") return responseError(res);
+  res.send({ id: await itemHandler.updateItem(token, email, body) });
+});
 
 //Lay item -->Tra ve html cua item do
 app.get("/item/:itemId", async (req, res) => {
@@ -428,11 +437,16 @@ app.get("/admin/home", (req, res) => {
 app.get("/admin/postItem", (req, res) => {
   res.sendFile(__dirname + "/html/admin_postItem.html");
 });
-
-app.get("/admin/home/:name", async (req, res) => {
-  res.sendFile(__dirname + "/html/admin_home.html");
+app.get("/admin/updateItem/:slug", (req, res) => {
+  res.sendFile(__dirname + "/html/admin_updateItem.html");
 });
 
+app.get("/admin/home/:name", (req, res) => {
+  res.sendFile(__dirname + "/html/admin_home.html");
+});
+app.get("admin/shop-homepage/:name", (req, res) => {
+  res.sendFile(__dirname + "/html/admin_home.html");
+});
 app.listen(port, () =>
   console.log(`Mochi app is listening at http://localhost:${port}`)
 );

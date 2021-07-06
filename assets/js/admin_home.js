@@ -17,7 +17,7 @@ async function init() {
     url = url.substr(i + 1, url.length - 1);
     i = url.search("/");
   }
-  if (url == undefined || url == "home") {
+  if (url == undefined ||  url =="home") {
     url = "";
     console.log(url);
   }
@@ -38,8 +38,26 @@ async function init() {
 
   for (var i = 0; i < r.length; i++) {
     console.log(i);
+    // <div class="col-lg-4 col-md-6 mb-4">
+    //   <div class="card"> <img src="/images\7025ab3a5a02607eab0035665ba34fce" class="card-img-top">
+        
+    //     <div class="card-body">
+    //       <h4 class="card-title"><a href="/admin/item/ObumoCM">Bút màu xanh</a></h4>
+    //       <h4>10 VNĐ <div class="fas fa-shopping-cart market"></div></h4>
+    //       <p class="card-text">... Hộp 12 Cây Bút Chì 2B Thân Vàng 4200E2B-12CB là dụng cụ không thể thiếu của các bạn học sinh hay những bạn đang theo học vẽ. Ngòi bút chuẩn 2B ...</p>
+    //     </div>
+
+    //     <div class="card-footer">
+    //           <p class="star1">0</p>
+    //           <div class="fas fa-star star"> </div>
+    //           <p class="people">0 đánh giá</p>
+    //     </div>
+
+    //   </div>
+    // </div>
     var div2 = document.createElement("div");
     div2.className = "col-lg-4 col-md-6 mb-4";
+
     var div7 = document.createElement("div");
     div7.className = "card";
     div2.appendChild(div7);
@@ -83,13 +101,33 @@ async function init() {
     p3.innerHTML = r[i].reacted_people + " đánh giá";
     p3.className = "people";
 
+    
+
     var div6 = document.createElement("div");
     div6.className = "card-footer";
+    
     div6.appendChild(p2);
     div6.appendChild(div5);
     div6.appendChild(p3);
     div7.appendChild(div6);
+    
     div1.appendChild(div2);
+
+    var del = document.createElement("a");
+    del.href = "/admin/item/" + r[i].id;
+    del.innerHTML = "Xóa";
+    del.style="padding: 0 2rem;";
+
+    var up = document.createElement("a");
+    up.href = "/admin/updateItem/" + r[i].id;
+    up.innerHTML = "Sửa";
+    up.style=" padding: 0 2rem;";
+
+    var div8 = document.createElement("div");
+    div8.className = "card-crud";
+    div8.appendChild(up);
+    div8.appendChild(del);
+    div7.appendChild(div8);
   }
 }
 
