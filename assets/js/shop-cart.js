@@ -78,6 +78,7 @@ async function LoadCart() {
     td5.className = "shoping__cart__item__close";
     var span1 = document.createElement("span");
     span1.className = "icon_close";
+    
 
     td5.appendChild(span1);
     tr1.appendChild(td5);
