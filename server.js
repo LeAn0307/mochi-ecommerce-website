@@ -13,7 +13,7 @@ const urlencodedParser = bodyParser.urlencoded({
 const jsonParser = bodyParser.json();
 
 // ham xu ly cho tung route
-//require giôngs import. Lấy dữ liệu các file vào 
+//require giôngs import. Lấy dữ liệu các file vào
 
 const userHandler = require("./server_handlers/user/account_user_handler");
 const adminHandler = require("./server_handlers/admin/account_admin_handler");
@@ -30,6 +30,7 @@ const multer = require("multer");
 const fs = require("fs");
 
 const dbHelper = require("./server_handlers/database_helper");
+const ItemHandler = require("./server_handlers/admin/item_handler");
 //khởi tạo server
 const app = express();
 const port = process.env.PORT || 3000;
@@ -75,7 +76,7 @@ app.post("/images/upload", (req, res) => {
     }
   });
 });
-// lay anh tu server gui xuong user 
+// lay anh tu server gui xuong user
 app.get("/images/:image_name", (req, res) => {
   const imagePath = path.join(__dirname, "images", req.params.image_name);
   try {
@@ -151,7 +152,7 @@ app.post("/auth_by_token", jsonParser, async (req, res) => {
 app.post("/get_user_info", jsonParser, async (req, res) => {
   const body = req.body;
 
-  console.log(body);
+  // console.log(body);
 
   let result = await userHandler.getUserInfo(body.email);
 
@@ -205,7 +206,7 @@ app.post("/admin/auth_by_token", jsonParser, async (req, res) => {
 app.post("/admin/get_user_info", jsonParser, async (req, res) => {
   const body = req.body;
 
-  console.log(body);
+  // console.log(body);
 
   let result = await adminHandler.getAdminInfo(body.email);
 
@@ -245,7 +246,7 @@ app.get("/item/:itemId", async (req, res) => {
 app.get("/item/id/:itemId", async (req, res) => {
   const itemId = req.params.itemId;
   const item = await itemHandler.getItem(itemId);
-  console.log(item);
+  // console.log(item);
   res.send(item);
 });
 
@@ -276,7 +277,7 @@ app.post("/comment/post", jsonParser, async (req, res) => {
 app.get("/comment/id/:itemId", async (req, res) => {
   const itemId = req.params.itemId;
   const comment = await commentHandler.SearchComment(itemId);
-  console.log(comment);
+  // console.log(comment);
   res.send(comment);
 });
 
@@ -297,7 +298,6 @@ app.post("/cart/add", jsonParser, async (req, res) => {
     body.quantity,
     body.itemId
   );
-  console.log(res1);
   res.send({
     res1,
   });
@@ -306,7 +306,6 @@ app.post("/cart/add", jsonParser, async (req, res) => {
 app.get("/cart/email/:email", async (req, res) => {
   const email = req.params.email;
   const res1 = await CartHandler.GetCart(email);
-  console.log(res1);
   res.send(res1);
 });
 
@@ -317,7 +316,6 @@ app.post("/cart/delete", jsonParser, async (req, res) => {
 
   if (token == null || token == "") return responseError(res);
   let res1 = await CartHandler.DeleteItemInCart(email, token, body.itemId);
-  console.log(res1);
   res.send(res1);
 });
 
@@ -333,7 +331,6 @@ app.post("/cart/update", jsonParser, async (req, res) => {
     body.quantity,
     body.itemId
   );
-  console.log(res1);
   res.send(res1);
 });
 
@@ -348,7 +345,6 @@ app.get("/search/nameStuff/:name?", jsonParser, async (req, res) => {
   let stuffList;
   if (name) stuffList = await itemHandler.search(name);
   else stuffList = await dbHelper.findDocument("Item");
-  console.log(stuffList);
   res.send(stuffList);
 });
 //End Search
@@ -372,15 +368,27 @@ app.post("/bill/post", jsonParser, async (req, res) => {
     body.phone,
     body.mail
   );
-  console.log(res1);
   res.send(res1);
+});
+/////////////////PROFILE///
+app.get("/user/profile", async (req, res) => {
+  const token = req.headers["token"];
+  const email = req.headers["email"];
+  let bills = await BillHandler.SearchBill(email);
+  let items = await dbHelper.findDocument("Item");
+  console.log(bills);
+  bills = bills.map((bill) => {
+    let itemIds = bill.items;
+    let itemList = items.filter((item) => itemIds.includes(item.id));
+    bill.items = itemList;
+    return bill;
+  });
+  // console.log(bills.length);
+  res.send(bills);
 });
 //End Checkout
 
-//render html 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/html/home.html");
-});
+//render html
 
 app.get("/home", (req, res) => {
   res.sendFile(__dirname + "/html/home.html");
@@ -412,6 +420,10 @@ app.get("/shop-homepage/:name", (req, res) => {
 
 app.get("/shop-item/:name", (req, res) => {
   res.sendFile(__dirname + "/html/shop-item.html");
+});
+// profile
+app.get("/profile", (req, res) => {
+  res.sendFile(__dirname + "/html/profile.html");
 });
 
 app.get("/sign_up", (req, res) => {
@@ -447,6 +459,11 @@ app.get("/admin/home/:name", (req, res) => {
 app.get("admin/shop-homepage/:name", (req, res) => {
   res.sendFile(__dirname + "/html/admin_home.html");
 });
+
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/html/home.html");
+});
+
 app.listen(port, () =>
   console.log(`Mochi app is listening at http://localhost:${port}`)
 );
